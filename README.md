@@ -1,0 +1,1 @@
+# en-ru-smart-band-10-pro
