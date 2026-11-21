@@ -1,0 +1,56 @@
+name: Build LingoInView Wear RPK
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rpk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Validate vocabulary and build generated offline dataset
+        run: |
+          python3 scripts/generate_data.py
+          node scripts/check-project.cjs
+          npm test
+      - name: Install Xiaomi Vela toolkit
+        run: npm install --no-audit --no-fund
+      - name: Build actual RPK with official aiot-toolkit
+        run: npm run build
+      - name: Validate RPK and rename
+        run: |
+          mkdir -p out
+          mapfile -t RPKS < <(find dist -type f -name '*.rpk' | sort)
+          printf 'Found %s RPK file(s)\n' "${#RPKS[@]}"
+          test "${#RPKS[@]}" -eq 1
+          test -s "${RPKS[0]}"
+          cp "${RPKS[0]}" out/LingoInView-Wear-Band10Pro.rpk
+          test "$(stat -c %s out/LingoInView-Wear-Band10Pro.rpk)" -gt 10240
+          file out/LingoInView-Wear-Band10Pro.rpk
+      - name: Upload RPK as workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: LingoInView-Wear-Band10Pro-RPK
+          path: out/LingoInView-Wear-Band10Pro.rpk
+          if-no-files-found: error
+      - name: Publish new GitHub Release
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="wear-v1.0.${{ github.run_number }}"
+          gh release create "$TAG" out/LingoInView-Wear-Band10Pro.rpk \
+            --title "LingoInView Wear $TAG" \
+            --notes "500 offline EN-RU cards in 22 groups (350 words + 150 expressions); irregular verb forms and usage examples, local review progress, EXIT. Experimental build for Xiaomi Smart Band 10 Pro Chinese Vela firmware. Install using AstroBox; does not modify firmware." \
+            --latest

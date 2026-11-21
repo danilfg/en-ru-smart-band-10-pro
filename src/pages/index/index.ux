@@ -1,0 +1,350 @@
+<template>
+  <div class="screen" @swipe="onSwipe">
+    <div class="top">
+      <text class="logo">LingoInView</text>
+      <text class="top-right">{{headerLabel}}</text>
+    </div>
+    <div if="{{mode === 'home'}}" class="home">
+      <div class="hero">
+        <text class="hero-mark">EN / RU</text>
+        <text class="hero-title">УЧИ СЛОВА</text>
+        <text class="hero-desc">500 слов и выражений</text>
+        <text class="hero-stat">{{studiedCount}} изучено  ·  {{dueCount}} к повторению</text>
+      </div>
+      <div class="primary" @click="openGroups"><text class="primary-label">ВЫБРАТЬ НАБОР  →</text></div>
+      <div class="secondary" @click="startReview"><text class="secondary-label">↻  ПОВТОРИТЬ СЛОВА</text></div>
+      <div class="secondary" @click="showStats"><text class="secondary-label">▤  МОЙ ПРОГРЕСС</text></div>
+      <div class="exit" @click="exitGame"><text class="exit-label">✕  ВЫХОД ИЗ ИГРЫ</text></div>
+      <text class="offline">●  Офлайн · Без аккаунта</text>
+    </div>
+
+    <div if="{{mode === 'groups'}}" class="groups-page">
+      <div class="section-head">
+        <text class="back" @click="goHome">‹</text>
+        <text class="section-title">ГРУППЫ</text>
+        <text class="page-num">{{groupPageLabel}}</text>
+      </div>
+      <div class="group-list">
+        <div class="group-row" for="{{visibleGroups}}" tid="id" @click="chooseGroup($item.id)">
+          <div class="group-left">
+            <text class="group-name">{{$item.name}}</text>
+            <text class="group-meta">{{$item.progress}}</text>
+          </div>
+          <text class="group-arrow">›</text>
+        </div>
+      </div>
+      <div class="page-controls">
+        <div class="page-btn" @click="prevPage"><text class="page-btn-label">‹ НАЗАД</text></div>
+        <div class="page-btn" @click="nextPage"><text class="page-btn-label">ДАЛЬШЕ ›</text></div>
+      </div>
+      <div class="exit" @click="goHome"><text class="exit-label">← МЕНЮ</text></div>
+    </div>
+
+    <div if="{{mode === 'card'}}" class="card-page">
+      <div class="session-head">
+        <text class="back" @click="goHome">‹</text>
+        <text class="session-title">{{selectedTitle}}</text>
+        <text class="position">{{positionLabel}}</text>
+      </div>
+      <div class="progress-track"><div class="progress-fill" style="width: {{progressWidth}}px;"></div></div>
+      <div if="{{!flipped}}" class="face" @click="flipCard">
+        <text class="word">{{currentWord}}</text>
+        <text class="tap-hint">Нажми для перевода</text>
+      </div>
+      <scroll if="{{flipped}}" class="back-scroll" scroll-y="true" scroll-top="{{scrollReset}}">
+        <div class="back-content">
+          <text class="back-word">{{currentWord}}</text>
+          <text class="translation">{{currentRu}}</text>
+          <text class="part-label">СИНОНИМЫ</text>
+          <text class="back-body">{{currentSyn}}</text>
+          <text class="part-label">ПРИМЕР</text>
+          <text class="back-body">{{currentExample}}</text>
+          <div if="{{hasForms}}" class="forms-panel">
+            <text class="part-label">НЕПРАВИЛЬНЫЙ ГЛАГОЛ · V1 / V2 / V3</text>
+            <text class="forms">{{currentForms}}</text>
+            <text class="form-example">1. {{example1}}</text>
+            <text class="form-example">2. {{example2}}</text>
+            <text class="form-example">3. {{example3}}</text>
+          </div>
+        </div>
+      </scroll>
+      <div class="controls">
+        <div class="bad-btn" @click="answerNo"><text class="vote-icon">✕</text><text class="bad-text">НЕ ЗНАЮ</text></div>
+        <div class="good-btn" @click="answerYes"><text class="vote-icon">✓</text><text class="good-text">ЗНАЮ</text></div>
+      </div>
+      <text class="card-footer">{{saveLabel}}  ·  {{sessionLabel}}</text>
+    </div>
+
+    <div if="{{mode === 'done'}}" class="done-page">
+      <text class="done-icon">✓</text>
+      <text class="done-title">НАБОР ПРОЙДЕН!</text>
+      <text class="done-subtitle">{{selectedTitle}}</text>
+      <text class="done-good">✓  Знаю: {{sessionKnown}}</text>
+      <text class="done-bad">✕  Повторить: {{sessionWrong}}</text>
+      <div class="primary" @click="restartGroup"><text class="primary-label">ПРОЙТИ ЕЩЁ РАЗ</text></div>
+      <div class="secondary" @click="goHome"><text class="secondary-label">НА ГЛАВНУЮ</text></div>
+    </div>
+
+    <div if="{{mode === 'stats'}}" class="stats-page">
+      <div class="section-head">
+        <text class="back" @click="goHome">‹</text>
+        <text class="section-title">ПРОГРЕСС</text>
+      </div>
+      <div class="stat-box"><text class="stat-label">КАРТОЧЕК ИЗУЧЕНО</text><text class="stat-number">{{studiedCount}} / 500</text></div>
+      <div class="stat-box"><text class="stat-label">ЗНАЮ СЕЙЧАС</text><text class="stat-number good">{{masteredCount}}</text></div>
+      <div class="stat-box"><text class="stat-label">К ПОВТОРЕНИЮ</text><text class="stat-number bad">{{dueCount}}</text></div>
+      <div class="stat-box"><text class="stat-label">ОТВЕТОВ ВСЕГО</text><text class="stat-number">{{answerCount}}</text></div>
+      <div class="primary" @click="startReview"><text class="primary-label">ПОВТОРИТЬ  →</text></div>
+      <div class="exit" @click="goHome"><text class="exit-label">← МЕНЮ</text></div>
+    </div>
+  </div>
+</template>
+
+<script>
+import storage from '@system.storage'
+import app from '@system.app'
+import cards from '../../common/cards.js'
+import groups from '../../common/groups.js'
+
+const KEY = 'lingoinview_wear_reviews_v1'
+const DAY = 86400000
+const LEVEL_DAYS = [1,3,7,14,30,60]
+
+export default {
+  private: {
+    mode: 'home', headerLabel: '500', studiedCount: 0, dueCount: 0, masteredCount: 0,
+    answerCount: 0, groupPageLabel: '1 / 6', visibleGroups: [], groupPage: 0,
+    selectedTitle: '', selectedId: 'VERBS', positionLabel: '1 / 50', progressWidth: 0,
+    currentWord: '', currentRu: '', currentSyn: '', currentExample: '',
+    currentForms: '', hasForms: false, example1: '', example2: '', example3: '',
+    flipped: false, scrollReset: 0, saveLabel: 'Офлайн', sessionLabel: '0 / 0',
+    sessionKnown: 0, sessionWrong: 0
+  },
+  onInit() {
+    this._progress = {}
+    this._queue = []
+    this._index = 0
+    this._selectedGroup = 'VERBS'
+    this._storageLoaded = false
+    this.updateSummary()
+    this.updateGroups()
+    try {
+      storage.get({
+        key: KEY,
+        success: (response) => {
+          try {
+            const decoded = JSON.parse(response.data || '{}')
+            if (decoded && typeof decoded === 'object' && !Array.isArray(decoded)) this._progress = decoded
+          } catch (err) { console.warn('Saved progress invalid; no data overwritten') }
+          this._storageLoaded = true
+          this.updateSummary()
+          this.updateGroups()
+        },
+        fail: () => { this._storageLoaded = true; this.saveLabel = 'Без сохранения' }
+      })
+    } catch (err) { this._storageLoaded = true; this.saveLabel = 'Без сохранения' }
+  },
+  onBackPress() {
+    if (this.mode === 'home') this.exitGame()
+    else if (this.mode === 'card') { this.saveProgress(); this.openGroups() }
+    else this.goHome()
+    return true
+  },
+  onSwipe(e) {
+    if (e && e.direction === 'right') this.onBackPress()
+  },
+  exitGame() { this.saveProgress(); app.terminate() },
+  goHome() { this.saveProgress(); this.updateSummary(); this.headerLabel = '500'; this.mode = 'home' },
+  openGroups() { this.mode = 'groups'; this.headerLabel = 'НАБОРЫ'; this.updateGroups() },
+  showStats() { this.updateSummary(); this.headerLabel = 'ОФЛАЙН'; this.mode = 'stats' },
+  updateSummary() {
+    const now = Date.now()
+    let studied = 0, due = 0, mastered = 0, answers = 0
+    for (let i = 0; i < cards.length; i++) {
+      const state = this._progress[cards[i].id]
+      if (!state) continue
+      if ((state.right || 0) + (state.wrong || 0) > 0) studied++
+      if ((state.level || 0) > 0) mastered++
+      if ((state.due || 0) <= now) due++
+      answers += (state.right || 0) + (state.wrong || 0)
+    }
+    this.studiedCount = studied
+    this.dueCount = due
+    this.masteredCount = mastered
+    this.answerCount = answers
+  },
+  updateGroups() {
+    const start = this.groupPage * 4
+    const visible = groups.slice(start, start + 4)
+    this.visibleGroups = visible.map(g => {
+      let studied = 0
+      for (let i = 0; i < cards.length; i++) {
+        if (cards[i].group === g.id && this._progress[cards[i].id]) studied++
+      }
+      return {id: g.id, name: g.name, progress: studied + ' / ' + g.count + ' карточек'}
+    })
+    this.groupPageLabel = (this.groupPage + 1) + ' / ' + Math.ceil(groups.length/4)
+  },
+  prevPage() { if (this.groupPage > 0) { this.groupPage--; this.updateGroups() } },
+  nextPage() { if (this.groupPage < Math.ceil(groups.length/4)-1) { this.groupPage++; this.updateGroups() } },
+  chooseGroup(id) {
+    this._selectedGroup = id
+    const group = groups.find(g => g.id === id)
+    this.selectedId = id
+    this.selectedTitle = group ? group.name : 'Карточки'
+    this._queue = cards.filter(c => c.group === id)
+    this.beginSession()
+  },
+  beginSession() {
+    this._index = 0
+    this.sessionKnown = 0
+    this.sessionWrong = 0
+    if (this._queue.length === 0) { this.mode = 'done'; return }
+    this.mode = 'card'
+    this.headerLabel = 'ОФЛАЙН'
+    this.displayCurrent()
+  },
+  startReview() {
+    const now = Date.now()
+    const due = cards.filter(c => {
+      const p = this._progress[c.id]
+      return p && (p.due || 0) <= now
+    })
+    const fresh = cards.filter(c => !this._progress[c.id]).slice(0,20)
+    this._queue = due.concat(fresh).slice(0,30)
+    this._selectedGroup = 'REVIEW'
+    this.selectedTitle = 'Повторение'
+    this.beginSession()
+  },
+  displayCurrent() {
+    const card = this._queue[this._index]
+    if (!card) { this.mode = 'done'; this.updateSummary(); return }
+    this.flipped = false
+    this.currentWord = card.en
+    this.currentRu = card.ru
+    this.currentSyn = card.syn
+    this.currentExample = card.ex
+    this.hasForms = !!card.forms
+    this.currentForms = card.forms ? card.forms.join('  ·  ') : ''
+    this.example1 = card.examples ? card.examples[0] : ''
+    this.example2 = card.examples ? card.examples[1] : ''
+    this.example3 = card.examples ? card.examples[2] : ''
+    this.positionLabel = (this._index+1)+' / '+this._queue.length
+    this.sessionLabel = this.positionLabel
+    this.progressWidth = Math.floor(304 * this._index / this._queue.length)
+    this.scrollReset = 0
+  },
+  flipCard() { this.flipped = true },
+  answerYes() { this.recordAnswer(true) },
+  answerNo() { this.recordAnswer(false) },
+  recordAnswer(known) {
+    if (this.mode !== 'card') return
+    const card = this._queue[this._index]
+    if (!card) return
+    const now = Date.now()
+    const p = this._progress[card.id] || {right:0, wrong:0, level:0, due:0, last:0}
+    if (known) {
+      p.right++
+      p.level = Math.min(6, (p.level || 0) + 1)
+      p.due = now + LEVEL_DAYS[p.level-1] * DAY
+      this.sessionKnown++
+    } else {
+      p.wrong++
+      p.level = 0
+      p.due = now + 10 * 60 * 1000
+      this.sessionWrong++
+    }
+    p.last = now
+    this._progress[card.id] = p
+    this.saveProgress()
+    this._index++
+    this.displayCurrent()
+  },
+  restartGroup() {
+    if (this._selectedGroup === 'REVIEW') this.startReview()
+    else this.chooseGroup(this._selectedGroup)
+  },
+  saveProgress() {
+    if (!this._storageLoaded) return
+    try {
+      storage.set({
+        key:KEY,
+        value:JSON.stringify(this._progress),
+        success:()=>{this.saveLabel='Сохранено'},
+        fail:()=>{this.saveLabel='Ошибка сохранения'}
+      })
+    } catch (err) { this.saveLabel='Ошибка сохранения' }
+  }
+}
+</script>
+
+<style>
+.screen { width: 336px; height: 480px; padding: 14px 16px 10px; background-color: #090a0e; flex-direction: column; overflow: hidden; }
+.top { width: 304px; height: 41px; flex-direction: row; justify-content: space-between; align-items: center; }
+.logo { color: #a5b4fc; font-size: 23px; font-weight: bold; }
+.top-right { color: #8b8d96; font-size: 18px; }
+.home { width: 304px; height: 410px; flex-direction: column; align-items: center; }
+.hero { width: 304px; height: 161px; justify-content: center; align-items: center; }
+.hero-mark { color: #8585e9; font-size: 18px; font-weight: bold; margin-bottom: 5px; }
+.hero-title { color: #ffffff; font-size: 31px; font-weight: bold; margin-bottom: 7px; }
+.hero-desc { color: #c5c5d0; font-size: 20px; }
+.hero-stat { color: #8d91a3; font-size: 15px; margin-top: 7px; }
+.primary { width: 290px; height: 58px; background-color: #5c59de; border-radius: 17px; align-items: center; justify-content: center; margin-bottom: 11px; }
+.primary-label { color: #ffffff; font-size: 19px; font-weight: bold; }
+.secondary { width: 290px; height: 53px; border-radius: 15px; background-color: #212331; align-items: center; justify-content: center; margin-bottom: 9px; }
+.secondary-label { color: #d6daf1; font-size: 17px; font-weight: bold; }
+.exit { width: 290px; height: 39px; align-items: center; justify-content: center; margin-top: 1px; }
+.exit-label { color: #8f93a9; font-size: 15px; }
+.offline { font-size: 14px; color: #767883; margin-top: 2px; }
+.groups-page { width: 304px; height: 410px; flex-direction: column; }
+.section-head { width: 304px; height: 48px; flex-direction: row; align-items: center; justify-content: space-between; }
+.back { color: #a5b4fc; font-size: 35px; width: 34px; }
+.section-title { color: #ffffff; font-size: 24px; font-weight: bold; }
+.page-num { color: #9fa1ae; font-size: 16px; }
+.group-list { height: 292px; flex-direction: column; }
+.group-row { width: 304px; height: 67px; border-radius: 13px; background-color: #1e202b; margin-bottom: 6px; flex-direction: row; justify-content: space-between; align-items: center; padding: 0px 11px; }
+.group-left { width: 248px; flex-direction: column; justify-content: center; }
+.group-name { color: #ffffff; font-size: 18px; font-weight: bold; }
+.group-meta { color: #9297ac; font-size: 14px; margin-top: 2px; }
+.group-arrow { color: #a5b4fc; font-size: 31px; }
+.page-controls { flex-direction: row; width: 304px; height: 43px; justify-content: space-between; }
+.page-btn { width: 146px; height: 40px; background-color: #2a2d3b; border-radius: 11px; align-items: center; justify-content: center; }
+.page-btn-label { color: #d7d9e8; font-size: 16px; }
+.card-page { width: 304px; height: 410px; flex-direction: column; }
+.session-head { width: 304px; height: 43px; flex-direction: row; justify-content: space-between; align-items: center; }
+.session-title { width: 202px; color: #e6e5f2; font-size: 16px; text-align: center; }
+.position { color: #a1a0b0; font-size: 15px; }
+.progress-track { width: 304px; height: 6px; background-color: #393b47; border-radius: 4px; }
+.progress-fill { height: 6px; border-radius: 4px; background-color: #9b92ff; }
+.face { width: 304px; height: 274px; justify-content: center; align-items: center; }
+.word { color: #ffffff; font-size: 35px; font-weight: bold; text-align: center; width: 296px; }
+.tap-hint { color: #84848d; font-size: 19px; margin-top: 25px; }
+.back-scroll { width: 304px; height: 274px; flex-direction: column; }
+.back-content { width: 304px; padding: 9px 2px 17px; flex-direction: column; }
+.back-word { color: #ffffff; font-size: 27px; font-weight: bold; text-align: center; margin-bottom: 5px; }
+.translation { color: #b7c4ff; font-size: 19px; text-align: center; margin-bottom: 7px; }
+.part-label { color: #9b92ff; font-size: 13px; font-weight: bold; margin-top: 8px; margin-bottom: 3px; }
+.back-body { color: #eeeeee; font-size: 17px; }
+.forms-panel { width: 300px; flex-direction: column; margin-top: 5px; }
+.forms { color: #a8f1ca; font-size: 17px; font-weight: bold; margin-bottom: 5px; }
+.form-example { color: #d9d9e6; font-size: 15px; margin-bottom: 5px; }
+.controls { height: 70px; flex-direction: row; justify-content: space-between; margin-top: 10px; }
+.bad-btn { width: 146px; height: 65px; background-color: #4a2730; border-radius: 16px; align-items: center; justify-content: center; }
+.good-btn { width: 146px; height: 65px; background-color: #1a3f31; border-radius: 16px; align-items: center; justify-content: center; }
+.vote-icon { color: #ffffff; font-size: 22px; font-weight: bold; }
+.bad-text { color: #ffacb7; font-size: 17px; font-weight: bold; }
+.good-text { color: #8ce7ad; font-size: 17px; font-weight: bold; }
+.card-footer { color: #7e8492; font-size: 13px; text-align: center; margin-top: 7px; }
+.done-page { width: 304px; height: 408px; justify-content: center; align-items: center; }
+.done-icon { color: #8ce7ad; font-size: 60px; }
+.done-title { color: #ffffff; font-size: 24px; font-weight: bold; margin-top: 13px; }
+.done-subtitle { color: #b0b4c7; font-size: 16px; margin-top: 7px; margin-bottom: 23px; }
+.done-good { color: #9decc4; font-size: 23px; margin-bottom: 7px; }
+.done-bad { color: #f4a2ac; font-size: 23px; margin-bottom: 23px; }
+.stats-page { width: 304px; height: 410px; flex-direction: column; }
+.stat-box { width: 304px; height: 65px; border-radius: 12px; background-color: #20232e; flex-direction: row; align-items: center; justify-content: space-between; padding: 0px 11px; margin-bottom: 8px; }
+.stat-label { color: #c4c7dc; font-size: 15px; width: 175px; }
+.stat-number { color: #ffffff; font-size: 22px; font-weight: bold; }
+.good { color: #8ce7ad; }
+.bad { color: #ffacb7; }
+</style>

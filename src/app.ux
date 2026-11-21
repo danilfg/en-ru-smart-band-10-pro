@@ -1,0 +1,6 @@
+<script>
+export default {
+  onCreate() { console.info('LingoInView Wear: offline flashcards') },
+  onDestroy() { console.info('LingoInView Wear exited') }
+}
+</script>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LingoInView Wear — 500 офлайн-карточек</title>
+<style>
+:root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color-scheme:dark}
+*[hidden]{display:none!important}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#f5f5f7;display:flex;flex-direction:column;align-items:center;padding:28px 10px;color:#222}
+h1{margin:0 0 10px;font-size:22px;font-weight:600;text-align:center}p{margin:0 0 20px;color:#666;text-align:center;font-size:14px}
+.watch-frame{padding:8px;background:#cdcac5;border-radius:42px;box-shadow:0 15px 35px #0002;width:354px;max-width:calc(100vw - 20px)}
+.watch{width:100%;background:#090a0e;color:white;height:480px;border-radius:36px;padding:15px 16px 10px;display:flex;flex-direction:column;overflow:hidden;position:relative}
+.head{display:flex;align-items:center;justify-content:space-between;height:42px;flex-shrink:0}.head strong{font-size:22px;color:#b6b5ff}.head span{font-size:16px;color:#9b9ba7}
+.screen{flex:1;min-height:0;display:none;flex-direction:column}.screen.active{display:flex}button{font:inherit;cursor:pointer;border:0;color:white}button:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.hero{text-align:center;flex:1;display:flex;flex-direction:column;justify-content:center;gap:8px}.hero .cap{color:#9698fb;font-weight:700;font-size:17px}.hero .big{font-size:31px;font-weight:800}.hero .sub{color:#c1c2ce;font-size:19px}.hero .stat{color:#999cab;font-size:14px}
+.btn{border-radius:15px;padding:14px 10px;text-align:center;font-size:16px;font-weight:700;background:#252735;margin:5px 0;min-height:48px}.primary{background:#6262d8}.secondary{background:#262938}.exit{background:transparent;color:#9294ab;font-size:14px;margin:5px 0}.hint{text-align:center;font-size:13px;color:#74798b}
+.section{display:flex;align-items:center;justify-content:space-between;height:50px}.section h2{font-size:21px;margin:0}.back{background:transparent;color:#a5b4fc;font-size:30px;width:35px;text-align:left}.muted{color:#a1a1b0;font-size:14px}
+.deck-list{display:flex;flex-direction:column;gap:7px;flex:1;min-height:0}.deck{background:#1f222e;border:0;border-radius:13px;padding:12px;text-align:left;display:flex;justify-content:space-between;align-items:center;min-height:65px}.deck strong{display:block;font-size:17px}.deck small{display:block;color:#9398ac;font-size:12px;margin-top:5px}.deck .arrow{color:#a5b4fc;font-size:27px}
+.pager{display:flex;gap:8px;margin-top:9px}.pager button{flex:1;background:#2a2d3b;border-radius:10px;padding:11px;font-size:14px}
+.progress{height:6px;background:#393b47;border-radius:4px;margin:3px 0 4px;overflow:hidden}.fill{height:100%;background:#9b92ff;width:0;transition:width .15s}
+.front{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;cursor:pointer}.front strong{font-size:36px;line-height:1.15;text-align:center;overflow-wrap:anywhere}.front span{font-size:18px;color:#888995}
+.rear{flex:1;min-height:0;overflow-y:auto;padding:12px 2px 8px;scrollbar-width:thin}.rear h2{font-size:27px;text-align:center;margin:0 0 5px;overflow-wrap:anywhere}.rear .ru{font-size:19px;color:#bbc8ff;text-align:center;margin:0 0 10px}.rear h3{font-size:12px;color:#a5a1fe;letter-spacing:.08em;margin:12px 0 5px}.rear .body{font-size:16px;margin:0;line-height:1.37}.rear .forms{color:#9ef0bd;font-size:17px;font-weight:700}.rear .examples{font-size:14px;color:#dfe0e9;margin:6px 0 0;line-height:1.4}.rear .examples div{margin:6px 0}
+.votes{display:flex;gap:12px;margin:8px 0 3px;flex-shrink:0}.votes button{flex:1;border-radius:16px;height:65px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:2px;font-size:17px;font-weight:700}.votes button strong{font-size:20px}.no{background:#48252d;color:#ffacb7}.yes{background:#1b4232;color:#9defba}
+.rowfoot{text-align:center;color:#7f8391;font-size:12px;height:18px;flex-shrink:0}.stats{display:flex;flex-direction:column;gap:10px;flex:1;margin:12px 0}.statline{background:#20232e;border-radius:11px;padding:12px;display:flex;justify-content:space-between;align-items:center}.statline span{color:#c5c9d9;font-size:13px}.statline strong{font-size:24px}.green{color:#96edb7}.red{color:#fca5b0}
+.done{display:flex;flex:1;flex-direction:column;justify-content:center;align-items:center;gap:14px}.done .tick{font-size:53px;color:#8ce7ad}.done h2{font-size:23px;margin:0;text-align:center}.done p{color:#aab1c5;margin:0}.done .result{font-size:22px}
+.info{max-width:560px;margin:18px auto 0;font-size:13px;text-align:center;color:#666;line-height:1.5}
+@media(max-width:380px){body{padding:12px 5px}.watch-frame{width:345px}}
+</style>
+</head>
+<body>
+<h1>Интерактивный прототип LingoInView Wear</h1><p>Офлайн-демо · 350 слов + 150 выражений</p>
+<div class="watch-frame"><div class="watch">
+  <div class="head"><strong>LingoInView</strong><span id="time">18:48</span></div>
+  <div class="screen active" id="home">
+    <div class="hero"><div class="cap">EN / RU</div><div class="big">УЧИ СЛОВА</div><div class="sub">500 слов и выражений</div><div class="stat" id="homeStat">0 изучено · 0 к повторению</div></div>
+    <button class="btn primary" id="openGroups">ВЫБРАТЬ НАБОР →</button><button class="btn secondary" id="review">↻ ПОВТОРИТЬ СЛОВА</button><button class="btn secondary" id="statsBtn">▤ МОЙ ПРОГРЕСС</button><button class="btn exit" id="quit">✕ ВЫХОД</button><div class="hint">● Офлайн · Без аккаунта</div>
+  </div>
+  <div class="screen" id="groups"><div class="section"><button class="back" data-home>‹</button><h2>ГРУППЫ</h2><span class="muted" id="pageInfo"></span></div><div class="deck-list" id="deckList"></div><div class="pager"><button id="prev">‹ НАЗАД</button><button id="next">ДАЛЬШЕ ›</button></div><button class="btn exit" data-home>← МЕНЮ</button></div>
+  <div class="screen" id="card"><div class="section"><button class="back" data-home>‹</button><h2 id="deckTitle" style="font-size:16px;text-align:center;max-width:210px"></h2><span class="muted" id="number"></span></div><div class="progress"><div class="fill" id="fill"></div></div>
+    <div class="front" id="front"><strong id="term"></strong><span>Нажми для перевода</span></div>
+    <div class="rear" id="rear" hidden><h2 id="backTerm"></h2><div class="ru" id="translation"></div><h3>СИНОНИМЫ</h3><p class="body" id="syn"></p><h3>ПРИМЕР</h3><p class="body" id="ex"></p><div id="formsPanel"><h3>V1 / V2 / V3</h3><div class="forms" id="forms"></div><div class="examples" id="examples"></div></div></div>
+    <div class="votes"><button class="no" id="no"><strong>✕</strong>НЕ ЗНАЮ</button><button class="yes" id="yes"><strong>✓</strong>ЗНАЮ</button></div><div class="rowfoot" id="footer">Офлайн · Прогресс сохранён</div>
+  </div>
+  <div class="screen" id="done"><div class="done"><div class="tick">✓</div><h2>НАБОР ПРОЙДЕН!</h2><p id="doneTitle"></p><div class="result green" id="knownCount"></div><div class="result red" id="missedCount"></div></div><button class="btn primary" id="again">ПРОЙТИ ЕЩЁ РАЗ</button><button class="btn secondary" data-home>НА ГЛАВНУЮ</button></div>
+  <div class="screen" id="stats"><div class="section"><button class="back" data-home>‹</button><h2>ПРОГРЕСС</h2></div><div class="stats" id="statLines"></div><button class="btn primary" id="statsReview">ПОВТОРИТЬ →</button><button class="btn exit" data-home>← МЕНЮ</button></div>
+</div></div>
+<div class="info">Это предпросмотр интерфейса для телефона и компьютера, а не эмулятор прошивки Xiaomi. В браслете прогресс сохраняется через Vela system.storage. В этой демо-версии — в браузере.</div>
+<script src="data.js"></script>
+<script>
+(()=>{
+  'use strict';
+  const CARDS=window.LINGO_CARDS||[],GROUPS=window.LINGO_GROUPS||[],KEY='lingoinview_wear_preview_v1',DAY=86400000,LEVEL=[1,3,7,14,30,60];
+  let history={};try{history=JSON.parse(localStorage.getItem(KEY)||'{}')||{}}catch(e){history={}}
+  let groupPage=0,queue=[],index=0,selected='',selectedTitle='',yes=0,no=0,flipped=false;
+  const $=id=>document.getElementById(id),screens=['home','groups','card','done','stats'];
+  function switchTo(mode){screens.forEach(id=>$(id).classList.toggle('active',id===mode));}
+  function totals(){const now=Date.now(),items=CARDS.filter(c=>history[c.id]);return {studied:items.length,mastered:items.filter(c=>history[c.id].level>0).length,due:items.filter(c=>history[c.id].due<=now).length,total:items.reduce((sum,c)=>sum+(history[c.id].right||0)+(history[c.id].wrong||0),0)}}
+  function home(){const t=totals();$('homeStat').textContent=`${t.studied} изучено · ${t.due} к повторению`;switchTo('home')}
+  function groups(){const all=GROUPS.length,totalPages=Math.ceil(all/4);$('pageInfo').textContent=`${groupPage+1} / ${totalPages}`;$('deckList').replaceChildren();for(const g of GROUPS.slice(groupPage*4,groupPage*4+4)){const b=document.createElement('button');b.className='deck';const details=document.createElement('span');const name=document.createElement('strong');name.textContent=g.name;const p=document.createElement('small');p.textContent=`${CARDS.filter(c=>c.group===g.id&&history[c.id]).length} / ${g.count} карточек`;details.append(name,p);const arrow=document.createElement('span');arrow.className='arrow';arrow.textContent='›';b.append(details,arrow);b.addEventListener('click',()=>choose(g.id));$('deckList').append(b)}switchTo('groups')}
+  function choose(id){selected=id;selectedTitle=GROUPS.find(g=>g.id===id)?.name||'Карточки';queue=CARDS.filter(c=>c.group===id);start()}
+  function review(){const t=Date.now(),due=CARDS.filter(c=>history[c.id]&&history[c.id].due<=t),fresh=CARDS.filter(c=>!history[c.id]).slice(0,20);queue=[...due,...fresh].slice(0,30);selected='REVIEW';selectedTitle='Повторение';start()}
+  function start(){index=0;yes=0;no=0;renderCard()}
+  function renderCard(){if(index>=queue.length){$('doneTitle').textContent=selectedTitle;$('knownCount').textContent=`✓ Знаю: ${yes}`;$('missedCount').textContent=`✕ Повторить: ${no}`;switchTo('done');return}const c=queue[index];flipped=false;$('front').hidden=false;$('rear').hidden=true;$('term').textContent=c.en;$('backTerm').textContent=c.en;$('translation').textContent=c.ru;$('syn').textContent=c.syn;$('ex').textContent=c.ex;$('deckTitle').textContent=selectedTitle;$('number').textContent=`${index+1}/${queue.length}`;$('fill').style.width=`${index/queue.length*100}%`;$('formsPanel').hidden=!c.forms;$('forms').textContent=(c.forms||[]).join(' · ');$('examples').replaceChildren();for(const ex of c.examples||[]){let d=document.createElement('div');d.textContent=ex;$('examples').appendChild(d)}$('rear').scrollTop=0;switchTo('card')}
+  function flip() {flipped=true;$('front').hidden=true;$('rear').hidden=false;$('rear').scrollTop=0}
+  function answer(known){if(index>=queue.length)return;const c=queue[index],now=Date.now(),v=history[c.id]||{right:0,wrong:0,level:0,due:0,last:0};if(known){v.right++;v.level=Math.min(6,v.level+1);v.due=now+LEVEL[v.level-1]*DAY;yes++}else{v.wrong++;v.level=0;v.due=now+600000;no++}v.last=now;history[c.id]=v;try{localStorage.setItem(KEY,JSON.stringify(history));$('footer').textContent='● Офлайн · Прогресс сохранён'}catch(e){$('footer').textContent='Ошибка сохранения: браузер'}index++;renderCard()}
+  function stats(){const t=totals();$('statLines').replaceChildren();for(const [label,v,cls] of [['КАРТОЧЕК ИЗУЧЕНО',`${t.studied} / 500`,''],['ЗНАЮ СЕЙЧАС',t.mastered,'green'],['К ПОВТОРЕНИЮ',t.due,'red'],['ОТВЕТОВ ВСЕГО',t.total,'']]){let line=document.createElement('div');line.className='statline';let s=document.createElement('span');s.textContent=label;let b=document.createElement('strong');b.textContent=v;b.className=cls;line.append(s,b);$('statLines').append(line)}switchTo('stats')}
+  $('openGroups').onclick=groups;$('review').onclick=review;$('statsBtn').onclick=stats;$('statsReview').onclick=review;$('prev').onclick=()=>{groupPage=Math.max(0,groupPage-1);groups()};$('next').onclick=()=>{groupPage=Math.min(Math.ceil(GROUPS.length/4)-1,groupPage+1);groups()};$('front').onclick=flip;$('no').onclick=()=>answer(false);$('yes').onclick=()=>answer(true);$('again').onclick=()=>selected==='REVIEW'?review():choose(selected);document.querySelectorAll('[data-home]').forEach(el=>el.onclick=home);$('quit').onclick=()=>{home();alert('На реальном браслете эта кнопка закрывает приложение. В браузере показано меню.')};$('time').textContent=new Date().toLocaleTimeString('ru-RU',{hour:'2-digit',minute:'2-digit'});home();
+})();
+</script>
+</body></html>

@@ -1,0 +1,501 @@
+﻿id,group,type,English,Russian,synonyms,example,V1,V2,V3,V1 example,V2 example,V3 example
+w1,VERBS,word,be,быть; находиться,"exist,remain",Be careful on the road.,be,was/were,been,I am ready.,I was ready yesterday.,I have been ready all day.
+w2,VERBS,word,have,иметь; обладать,"own,possess",We have enough time.,have,had,had,I have a question.,I had a question.,I have had this question before.
+w3,VERBS,word,do,делать; выполнять,"perform,carry out",Do your best today.,do,did,done,I do my homework.,I did my homework.,I have done my homework.
+w4,VERBS,word,say,сказать; произнести,"tell,state","Say it again, please.",say,said,said,I say hello.,I said hello.,I have said hello already.
+w5,VERBS,word,go,идти; ехать,"move,travel",We go to work by train.,go,went,gone,I go home.,I went home.,I have gone home.
+w6,VERBS,word,get,получать; становиться,"obtain,receive",I get messages every day.,get,got,gotten,I get a message.,I got a message.,I have gotten a message.
+w7,VERBS,word,make,делать; создавать,"create,produce",Make a clear plan.,make,made,made,I make a plan.,I made a plan.,I have made a plan.
+w8,VERBS,word,know,знать,"understand,recognize",I know the answer.,know,knew,known,I know the answer.,I knew the answer.,I have known the answer for years.
+w9,VERBS,word,think,думать; полагать,"believe,consider",Think before you reply.,think,thought,thought,I think about work.,I thought about work.,I have thought about work.
+w10,VERBS,word,take,брать; занимать,"grab,carry",Take your keys with you.,take,took,taken,I take the bus.,I took the bus.,I have taken the bus.
+w11,VERBS,word,see,видеть; понимать,"notice,observe",I see a small mistake.,see,saw,seen,I see the sign.,I saw the sign.,I have seen the sign.
+w12,VERBS,word,come,приходить; приезжать,"arrive,approach",Come here for a moment.,come,came,come,I come early.,I came early.,I have come early before.
+w13,VERBS,word,want,хотеть,"wish,desire",I want to learn English.,,,,,,
+w14,VERBS,word,look,смотреть; выглядеть,"watch,glance",Look at this picture.,,,,,,
+w15,VERBS,word,use,использовать,"apply,employ",Use a simple example.,,,,,,
+w16,VERBS,word,find,находить,"discover,locate",Find the correct word.,find,found,found,I find errors.,I found an error.,I have found many errors.
+w17,VERBS,word,give,давать; дарить,"provide,offer",Give me a chance.,give,gave,given,I give her a book.,I gave her a book.,I have given her a book.
+w18,VERBS,word,tell,рассказывать; сообщать,"inform,explain",Tell me the truth.,tell,told,told,I tell the truth.,I told the truth.,I have told the truth.
+w19,VERBS,word,work,работать; функционировать,"operate,function",This method works well.,,,,,,
+w20,VERBS,word,call,звонить; называть,"phone,name",Call me after lunch.,,,,,,
+w21,VERBS,word,try,пытаться; пробовать,"attempt,test",Try another approach.,,,,,,
+w22,VERBS,word,ask,спрашивать; просить,"inquire,request",Ask a clear question.,,,,,,
+w23,VERBS,word,need,нуждаться; требоваться,"require,want",I need more practice.,,,,,,
+w24,VERBS,word,feel,чувствовать,"sense,experience",I feel much better.,feel,felt,felt,I feel calm.,I felt calm.,I have felt calm all week.
+w25,VERBS,word,become,становиться,"turn into,grow",She became a teacher.,become,became,become,I become stronger.,I became stronger.,I have become stronger.
+w26,VERBS,word,leave,уходить; оставлять,"depart,exit",Leave the room quietly.,leave,left,left,I leave at six.,I left at six.,I have left already.
+w27,VERBS,word,put,класть; ставить,"place,set",Put the book here.,put,put,put,I put the book here.,I put the book here yesterday.,I have put the book here.
+w28,VERBS,word,mean,означать; иметь в виду,"signify,indicate",What does this word mean?,mean,meant,meant,I mean it.,I meant it.,I have meant it all along.
+w29,VERBS,word,keep,хранить; продолжать,"retain,maintain",Keep this note for later.,keep,kept,kept,I keep a journal.,I kept a journal.,I have kept a journal for years.
+w30,VERBS,word,let,позволять; разрешать,"allow,permit",Let me help you.,let,let,let,I let her speak.,I let her speak yesterday.,I have let her speak.
+w31,VERBS,word,begin,начинать,"start,commence",Begin with an easy task.,begin,began,begun,I begin with a question.,I began with a question.,I have begun with a question.
+w32,VERBS,word,seem,казаться,"appear,look",You seem tired today.,,,,,,
+w33,VERBS,word,help,помогать,"assist,support",Help me solve this problem.,,,,,,
+w34,VERBS,word,talk,разговаривать,"speak,chat",Let's talk after work.,,,,,,
+w35,VERBS,word,turn,поворачивать; менять,"rotate,switch",Turn left at the corner.,,,,,,
+w36,VERBS,word,start,начинать; запускать,"begin,launch",Start the application.,,,,,,
+w37,VERBS,word,show,показывать,"display,demonstrate",Show me how it works.,show,showed,shown,I show the result.,I showed the result.,I have shown the result.
+w38,VERBS,word,hear,слышать,"listen,perceive",Can you hear the music?,hear,heard,heard,I hear music.,I heard music.,I have heard that song.
+w39,VERBS,word,play,играть,"perform,participate",The children play outside.,,,,,,
+w40,VERBS,word,run,бежать; запускать,"race,operate",I run in the park.,run,ran,run,I run every morning.,I ran yesterday.,I have run this week.
+w41,VERBS,word,move,двигать(ся),"shift,relocate",Move the chair closer.,,,,,,
+w42,VERBS,word,like,нравиться,"enjoy,appreciate",I like this idea.,,,,,,
+w43,VERBS,word,live,жить,"reside,exist",They live near the river.,,,,,,
+w44,VERBS,word,believe,верить; считать,"trust,accept",I believe your story.,,,,,,
+w45,VERBS,word,hold,держать; удерживать,"grip,keep",Hold the door open.,hold,held,held,I hold the bag.,I held the bag.,I have held the bag.
+w46,VERBS,word,bring,приносить; приводить,"carry,deliver",Bring a warm jacket.,bring,brought,brought,I bring lunch.,I brought lunch.,I have brought lunch.
+w47,VERBS,word,happen,происходить,"occur,take place",Mistakes happen sometimes.,,,,,,
+w48,VERBS,word,write,писать,"record,compose",Write your name here.,write,wrote,written,I write a letter.,I wrote a letter.,I have written a letter.
+w49,VERBS,word,provide,предоставлять,"supply,offer",We provide useful tools.,,,,,,
+w50,VERBS,word,sit,сидеть,"be seated,rest",Sit near the window.,sit,sat,sat,I sit near the window.,I sat near the window.,I have sat there before.
+w51,VERBS,word,stand,стоять,"rise,remain upright",Stand next to me.,stand,stood,stood,I stand outside.,I stood outside.,I have stood outside before.
+w52,VERBS,word,lose,терять; проигрывать,"misplace,fail",Don't lose your ticket.,lose,lost,lost,I lose my keys sometimes.,I lost my keys.,I have lost my keys.
+w53,VERBS,word,pay,платить,"settle,compensate",Pay the bill online.,pay,paid,paid,I pay by card.,I paid by card.,I have paid by card.
+w54,VERBS,word,meet,встречать(ся),"encounter,gather",We meet every Friday.,meet,met,met,I meet my friends.,I met my friends.,I have met my friends.
+w55,VERBS,word,include,включать; содержать,"contain,cover",Include two examples.,,,,,,
+w56,VERBS,word,continue,продолжать,"carry on,proceed",Continue reading the story.,,,,,,
+w57,VERBS,word,set,ставить; устанавливать,"place,establish",Set a reminder for tomorrow.,set,set,set,I set an alarm.,I set an alarm yesterday.,I have set an alarm.
+w58,VERBS,word,learn,учить; узнавать,"study,master",Learn five words a day.,,,,,,
+w59,VERBS,word,change,менять; изменяться,"alter,modify",Change the password now.,,,,,,
+w60,VERBS,word,lead,вести; руководить,"guide,direct",She leads the team.,lead,led,led,I lead the team.,I led the team.,I have led the team.
+w61,PEOPLE,word,person,человек; личность,"individual,human",One person can make a difference.,,,,,,
+w62,PEOPLE,word,people,люди; народ,"persons,public",Many people enjoy learning.,,,,,,
+w63,PEOPLE,word,man,мужчина; человек,"male,adult",The man opened the door.,,,,,,
+w64,PEOPLE,word,woman,женщина,"lady,female",A woman called the office.,,,,,,
+w65,PEOPLE,word,child,ребёнок,"kid,youngster",The child loves stories.,,,,,,
+w66,PEOPLE,word,friend,друг,"companion,buddy",My friend speaks English.,,,,,,
+w67,PEOPLE,word,family,семья,"relatives,household",Our family eats together.,,,,,,
+w68,PEOPLE,word,parent,родитель,"mother or father,guardian",Every parent needs support.,,,,,,
+w69,PEOPLE,word,father,отец,"dad,parent",Her father works nearby.,,,,,,
+w70,PEOPLE,word,mother,мать,"mom,parent",My mother likes music.,,,,,,
+w71,PEOPLE,word,brother,брат,sibling,My brother lives in London.,,,,,,
+w72,PEOPLE,word,sister,сестра,sibling,Her sister is a doctor.,,,,,,
+w73,PEOPLE,word,partner,партнёр; спутник,"companion,associate",My partner shares the work.,,,,,,
+w74,PEOPLE,word,student,ученик; студент,"learner,pupil",Each student gets feedback.,,,,,,
+w75,PEOPLE,word,teacher,учитель; преподаватель,"instructor,educator",The teacher explained the rule.,,,,,,
+w76,PEOPLE,word,doctor,врач,"physician,medic",The doctor asked questions.,,,,,,
+w77,PEOPLE,word,worker,работник,"employee,staff member",Every worker needs rest.,,,,,,
+w78,PEOPLE,word,manager,руководитель,"supervisor,lead",The manager approved the plan.,,,,,,
+w79,PEOPLE,word,customer,клиент; покупатель,"client,buyer",The customer asked for help.,,,,,,
+w80,PEOPLE,word,team,команда,"group,crew",Our team works remotely.,,,,,,
+w81,PEOPLE,word,leader,лидер; руководитель,"head,chief",A good leader listens.,,,,,,
+w82,PEOPLE,word,colleague,коллега,"coworker,teammate",My colleague found a bug.,,,,,,
+w83,PEOPLE,word,class,класс; занятие,"lesson,course",Our class begins at nine.,,,,,,
+w84,PEOPLE,word,group,группа,"team,collection",Join the study group.,,,,,,
+w85,PEOPLE,word,company,компания; фирма,"business,firm",The company released an app.,,,,,,
+w86,PEOPLE,word,relationship,отношения; связь,"connection,bond",Trust builds a relationship.,,,,,,
+w87,PEOPLE,word,conversation,разговор; беседа,"talk,dialogue",We had a long conversation.,,,,,,
+w88,PEOPLE,word,voice,голос,"speech,tone",I recognized her voice.,,,,,,
+w89,PEOPLE,word,message,сообщение,"note,text",I sent a short message.,,,,,,
+w90,PEOPLE,word,question,вопрос,"query,inquiry",This question is important.,,,,,,
+w91,PEOPLE,word,answer,ответ,"reply,response",Please check your answer.,,,,,,
+w92,PEOPLE,word,name,имя; название,"title,label",Write your full name.,,,,,,
+w93,PEOPLE,word,face,лицо,"expression,front",I know that face.,,,,,,
+w94,PEOPLE,word,hand,кисть руки; рука,"palm,grip",Raise your hand to speak.,,,,,,
+w95,PEOPLE,word,head,голова; руководитель,"mind,leader",Keep your head up.,,,,,,
+w96,PEOPLE,word,eye,глаз,"vision,sight",Close your eyes for a moment.,,,,,,
+w97,PEOPLE,word,heart,сердце,"core,center",Her heart was beating fast.,,,,,,
+w98,PEOPLE,word,life,жизнь,"existence,lifetime",Life can change quickly.,,,,,,
+w99,PEOPLE,word,world,мир,"globe,earth",The world is changing.,,,,,,
+w100,PEOPLE,word,human,человек; человеческий,"person,individual",Every human needs sleep.,,,,,,
+w101,TIME,word,time,время,"period,moment",Time moves quickly.,,,,,,
+w102,TIME,word,day,день,"date,daytime",Have a nice day.,,,,,,
+w103,TIME,word,week,неделя,seven days,I exercise three days a week.,,,,,,
+w104,TIME,word,month,месяц,calendar month,The project ends next month.,,,,,,
+w105,TIME,word,year,год,twelve months,This year feels different.,,,,,,
+w106,TIME,word,hour,час,sixty minutes,The train arrives in an hour.,,,,,,
+w107,TIME,word,minute,минута,"moment,sixty seconds","Wait a minute, please.",,,,,,
+w108,TIME,word,second,секунда; второй,"instant,moment",Give me a second.,,,,,,
+w109,TIME,word,morning,утро,early hours,I study in the morning.,,,,,,
+w110,TIME,word,afternoon,время после полудня,daytime,See you this afternoon.,,,,,,
+w111,TIME,word,evening,вечер,late day,We walk every evening.,,,,,,
+w112,TIME,word,night,ночь,"darkness,nighttime",The city is quiet at night.,,,,,,
+w113,TIME,word,today,сегодня,this day,Today we learn new words.,,,,,,
+w114,TIME,word,tomorrow,завтра,next day,The exam is tomorrow.,,,,,,
+w115,TIME,word,yesterday,вчера,previous day,Yesterday was a busy day.,,,,,,
+w116,TIME,word,now,сейчас,"currently,at present","Start now, not later.",,,,,,
+w117,TIME,word,later,позже,"afterward,subsequently",I'll call you later.,,,,,,
+w118,TIME,word,early,рано; ранний,"ahead of time,soon",She arrived early.,,,,,,
+w119,TIME,word,late,поздно; опоздавший,"delayed,tardy",Don't be late again.,,,,,,
+w120,TIME,word,soon,скоро,"shortly,before long",See you soon.,,,,,,
+w121,TIME,word,always,всегда,"constantly,forever",Always save your work.,,,,,,
+w122,TIME,word,never,никогда,not ever,Never share your password.,,,,,,
+w123,TIME,word,often,часто,"frequently,regularly",We often travel together.,,,,,,
+w124,TIME,word,sometimes,иногда,"occasionally,at times",Sometimes I work from home.,,,,,,
+w125,TIME,word,usually,обычно,"normally,generally",I usually get up at seven.,,,,,,
+w126,TIME,word,again,снова; опять,"once more,anew",Try the exercise again.,,,,,,
+w127,TIME,word,already,уже,"previously,by now",I have already eaten.,,,,,,
+w128,TIME,word,still,всё ещё; неподвижно,"yet,even now",She still lives here.,,,,,,
+w129,TIME,word,before,до; раньше,"earlier,prior to",Read the instructions before starting.,,,,,,
+w130,TIME,word,after,после,"later than,following",Call me after the meeting.,,,,,,
+w131,TIME,word,place,место,"location,spot",This is a quiet place.,,,,,,
+w132,TIME,word,area,область; район,"region,zone",The area is safe at night.,,,,,,
+w133,TIME,word,city,город,"town,metropolis",The city has many museums.,,,,,,
+w134,TIME,word,town,городок,"small city,municipality",We moved to a small town.,,,,,,
+w135,TIME,word,country,страна; сельская местность,"nation,state",Which country are you from?,,,,,,
+w136,TIME,word,street,улица,"road,avenue",Cross the street carefully.,,,,,,
+w137,TIME,word,road,дорога,"route,highway",The road was closed.,,,,,,
+w138,TIME,word,way,путь; способ,"method,route",Find a better way to learn.,,,,,,
+w139,TIME,word,side,сторона; бок,"edge,part",Stay on the right side.,,,,,,
+w140,TIME,word,front,перед; передняя часть,"forepart,face",The car stopped in front.,,,,,,
+w141,TIME,word,back,спина; задняя часть,"rear,reverse",Go back to the main menu.,,,,,,
+w142,TIME,word,top,верх; вершина,"peak,summit",The book is on top.,,,,,,
+w143,TIME,word,bottom,низ; дно,"base,lowest part",Scroll to the bottom.,,,,,,
+w144,TIME,word,center,центр,"middle,core",Meet me in the city center.,,,,,,
+w145,TIME,word,here,здесь,in this place,Put the bag here.,,,,,,
+w146,TIME,word,there,там,in that place,She lives over there.,,,,,,
+w147,TIME,word,near,близко; рядом,"close,nearby",The school is near home.,,,,,,
+w148,TIME,word,far,далеко,"distant,remote",The station is not far.,,,,,,
+w149,TIME,word,inside,внутри,"within,indoors",Leave your shoes inside.,,,,,,
+w150,TIME,word,outside,снаружи; на улице,"outdoors,external",It's cold outside today.,,,,,,
+w151,HOME,word,home,дом; родной дом,"house,residence",I want to go home.,,,,,,
+w152,HOME,word,house,дом; здание,"building,residence",We bought a small house.,,,,,,
+w153,HOME,word,room,комната,"chamber,space",The room is very bright.,,,,,,
+w154,HOME,word,door,дверь,"entrance,gateway",Close the door softly.,,,,,,
+w155,HOME,word,window,окно,"opening,pane",Open the window for air.,,,,,,
+w156,HOME,word,table,стол,"desk,surface",Dinner is on the table.,,,,,,
+w157,HOME,word,chair,стул,seat,Please take a chair.,,,,,,
+w158,HOME,word,bed,кровать,"cot,berth",He went to bed early.,,,,,,
+w159,HOME,word,kitchen,кухня,cooking area,The kitchen smells wonderful.,,,,,,
+w160,HOME,word,bathroom,ванная; санузел,"washroom,restroom",The bathroom is upstairs.,,,,,,
+w161,HOME,word,water,вода,"liquid,H2O",Drink plenty of water.,,,,,,
+w162,HOME,word,food,еда,"meal,nourishment",The food tastes fresh.,,,,,,
+w163,HOME,word,meal,приём пищи,"dish,food",Lunch is my favorite meal.,,,,,,
+w164,HOME,word,breakfast,завтрак,morning meal,I make breakfast at home.,,,,,,
+w165,HOME,word,lunch,обед,midday meal,Let's have lunch together.,,,,,,
+w166,HOME,word,dinner,ужин,evening meal,Dinner is ready now.,,,,,,
+w167,HOME,word,bread,хлеб,loaf,This bread is still warm.,,,,,,
+w168,HOME,word,fruit,фрукты; плод,produce,Eat some fruit each day.,,,,,,
+w169,HOME,word,vegetable,овощ,"produce,greens",Add a vegetable to the soup.,,,,,,
+w170,HOME,word,coffee,кофе,"brew,drink",I drink coffee in the morning.,,,,,,
+w171,HOME,word,tea,чай,"brew,infusion",Would you like some tea?,,,,,,
+w172,HOME,word,money,деньги,"cash,funds",Save your money for travel.,,,,,,
+w173,HOME,word,price,цена,"cost,charge",The price went up.,,,,,,
+w174,HOME,word,cost,стоимость; затраты,"price,expense",The cost is too high.,,,,,,
+w175,HOME,word,shop,магазин; покупать,"store,buy",The shop closes at six.,,,,,,
+w176,HOME,word,store,магазин; хранить,"shop,keep",There is a store nearby.,,,,,,
+w177,HOME,word,market,рынок,"marketplace,bazaar",We buy vegetables at the market.,,,,,,
+w178,HOME,word,bag,сумка; пакет,"sack,pouch","Carry this bag, please.",,,,,,
+w179,HOME,word,key,ключ; основной,"access,crucial",I lost my house key.,,,,,,
+w180,HOME,word,phone,телефон,"telephone,mobile",My phone is charging.,,,,,,
+w181,HOME,word,car,автомобиль,"vehicle,automobile",The car needs fuel.,,,,,,
+w182,HOME,word,bus,автобус,coach,The bus is running late.,,,,,,
+w183,HOME,word,train,поезд,rail service,We took the train home.,,,,,,
+w184,HOME,word,plane,самолёт,"aircraft,airplane",The plane landed safely.,,,,,,
+w185,HOME,word,ticket,билет,"pass,admission",Keep your ticket nearby.,,,,,,
+w186,HOME,word,trip,поездка,"journey,excursion",Our trip starts tomorrow.,,,,,,
+w187,HOME,word,travel,путешествовать,"journey,tour",I love to travel by train.,,,,,,
+w188,HOME,word,weather,погода,"climate,conditions",The weather is improving.,,,,,,
+w189,HOME,word,sun,солнце,"sunlight,star",The sun rises in the east.,,,,,,
+w190,HOME,word,rain,дождь,"rainfall,shower",Heavy rain is expected.,,,,,,
+w191,HOME,word,snow,снег,snowfall,There is snow on the road.,,,,,,
+w192,HOME,word,wind,ветер,"breeze,gust",The wind was very strong.,,,,,,
+w193,HOME,word,medicine,лекарство; медицина,"medication,remedy",Take the medicine with water.,,,,,,
+w194,HOME,word,health,здоровье,"wellness,fitness",Good sleep supports health.,,,,,,
+w195,HOME,word,sleep,сон; спать,"rest,slumber",I need eight hours of sleep.,sleep,slept,slept,I sleep well.,I slept well.,I have slept well this week.
+w196,HOME,word,walk,гулять; ходить,"stroll,step",We walk after dinner.,,,,,,
+w197,HOME,word,exercise,упражнение; тренироваться,"workout,practice",Regular exercise builds strength.,,,,,,
+w198,HOME,word,rest,отдых; отдыхать,"relaxation,break",Take a short rest.,,,,,,
+w199,HOME,word,body,тело,"figure,frame",Listen to your body.,,,,,,
+w200,HOME,word,pain,боль,"ache,discomfort",The pain went away.,,,,,,
+w201,WORK,word,job,работа; должность,"position,employment",She found a new job.,,,,,,
+w202,WORK,word,task,задача,"assignment,duty",Finish one task at a time.,,,,,,
+w203,WORK,word,project,проект,"plan,venture",Our project is almost ready.,,,,,,
+w204,WORK,word,plan,план,"strategy,proposal",We need a realistic plan.,,,,,,
+w205,WORK,word,goal,цель,"aim,target",Set a clear goal.,,,,,,
+w206,WORK,word,problem,проблема; задача,"issue,difficulty",We solved the problem.,,,,,,
+w207,WORK,word,solution,решение,"answer,fix",This solution is simple.,,,,,,
+w208,WORK,word,idea,идея,"thought,concept",That's a useful idea.,,,,,,
+w209,WORK,word,result,результат,"outcome,effect",Check the final result.,,,,,,
+w210,WORK,word,reason,причина; довод,"cause,explanation",What is the reason for this?,,,,,,
+w211,WORK,word,fact,факт,"truth,reality",Check every important fact.,,,,,,
+w212,WORK,word,information,информация,"details,data",The information is correct.,,,,,,
+w213,WORK,word,data,данные,"information,records",Store the data securely.,,,,,,
+w214,WORK,word,system,система,"framework,network",The system is working.,,,,,,
+w215,WORK,word,service,услуга; сервис,"assistance,facility",The service is temporarily down.,,,,,,
+w216,WORK,word,product,продукт; изделие,"item,goods",Our product is easy to use.,,,,,,
+w217,WORK,word,device,устройство,"gadget,equipment",This device has a microphone.,,,,,,
+w218,WORK,word,computer,компьютер,"PC,machine",My computer needs an update.,,,,,,
+w219,WORK,word,screen,экран,"display,monitor",The screen is too bright.,,,,,,
+w220,WORK,word,button,кнопка,"control,switch",Press the blue button.,,,,,,
+w221,WORK,word,file,файл; документ,"document,record",Save the file first.,,,,,,
+w222,WORK,word,folder,папка,directory,Move the file into this folder.,,,,,,
+w223,WORK,word,code,код; программа,"program,source",Review the code carefully.,,,,,,
+w224,WORK,word,program,программа,"application,software",The program starts quickly.,,,,,,
+w225,WORK,word,application,приложение,"app,program",This application works offline.,,,,,,
+w226,WORK,word,network,сеть,"system,web",The network is unavailable.,,,,,,
+w227,WORK,word,server,сервер,"host,machine",The server needs maintenance.,,,,,,
+w228,WORK,word,error,ошибка,"mistake,fault",The error is easy to fix.,,,,,,
+w229,WORK,word,issue,вопрос; проблема,"problem,matter",We found another issue.,,,,,,
+w230,WORK,word,bug,дефект программы,"defect,fault",The tester reported a bug.,,,,,,
+w231,WORK,word,test,тест; проверять,"check,examination",Run the test again.,,,,,,
+w232,WORK,word,check,проверять; проверка,"verify,inspect",Check the connection first.,,,,,,
+w233,WORK,word,build,собирать; строить,"construct,assemble",Build the app every day.,build,built,built,I build apps.,I built an app.,I have built several apps.
+w234,WORK,word,create,создавать,"make,produce",Create a new document.,,,,,,
+w235,WORK,word,design,дизайн; проектировать,"plan,develop",Design a clear interface.,,,,,,
+w236,WORK,word,manage,управлять,"control,handle",We manage several projects.,,,,,,
+w237,WORK,word,develop,разрабатывать; развивать,"create,grow",They develop mobile apps.,,,,,,
+w238,WORK,word,improve,улучшать,"enhance,refine",Practice helps improve skills.,,,,,,
+w239,WORK,word,update,обновление; обновлять,"refresh,upgrade",Install the latest update.,,,,,,
+w240,WORK,word,release,выпуск; выпускать,"publish,launch",The release is ready today.,,,,,,
+w241,WORK,word,process,процесс; обрабатывать,"procedure,handle",Follow the review process.,,,,,,
+w242,WORK,word,report,отчёт; сообщать,"summary,inform",Write a detailed report.,,,,,,
+w243,WORK,word,meeting,встреча; совещание,"session,conference",The meeting starts at ten.,,,,,,
+w244,WORK,word,deadline,крайний срок,"due date,cutoff",The deadline is Friday.,,,,,,
+w245,WORK,word,request,запрос; просить,"inquiry,ask",Send a request to the API.,,,,,,
+w246,WORK,word,response,ответ; отклик,"reply,reaction",The response was immediate.,,,,,,
+w247,WORK,word,access,доступ,"entry,permission",I need access to the repository.,,,,,,
+w248,WORK,word,support,поддержка; поддерживать,"help,assist",Contact support for help.,,,,,,
+w249,WORK,word,quality,качество,"standard,excellence",Quality matters more than speed.,,,,,,
+w250,WORK,word,security,безопасность,"protection,safety",Security is a top priority.,,,,,,
+w251,FEELINGS,word,good,хороший,"great,fine",This is a good example.,,,,,,
+w252,FEELINGS,word,bad,плохой,"poor,awful",That's a bad idea.,,,,,,
+w253,FEELINGS,word,great,отличный; великий,"excellent,superb",You did a great job.,,,,,,
+w254,FEELINGS,word,small,маленький,"little,tiny",We live in a small town.,,,,,,
+w255,FEELINGS,word,big,большой,"large,huge",This is a big opportunity.,,,,,,
+w256,FEELINGS,word,large,крупный; большой,"big,wide",They work in a large company.,,,,,,
+w257,FEELINGS,word,long,длинный; долгий,"lengthy,extended",It was a long journey.,,,,,,
+w258,FEELINGS,word,short,короткий,"brief,small",Take a short break.,,,,,,
+w259,FEELINGS,word,new,новый,"fresh,recent",I bought a new book.,,,,,,
+w260,FEELINGS,word,old,старый,"aged,former",This is an old building.,,,,,,
+w261,FEELINGS,word,young,молодой,"youthful,juvenile",She is still very young.,,,,,,
+w262,FEELINGS,word,important,важный,"significant,major",This step is important.,,,,,,
+w263,FEELINGS,word,possible,возможный,"feasible,likely",Anything is possible with practice.,,,,,,
+w264,FEELINGS,word,difficult,трудный,"hard,challenging",This exercise is difficult.,,,,,,
+w265,FEELINGS,word,easy,лёгкий; простой,"simple,effortless",The first level is easy.,,,,,,
+w266,FEELINGS,word,simple,простой,"easy,basic",Keep the explanation simple.,,,,,,
+w267,FEELINGS,word,hard,трудный; твёрдый,"difficult,tough",The test was hard.,,,,,,
+w268,FEELINGS,word,clear,ясный; понятный,"obvious,plain",Give a clear answer.,,,,,,
+w269,FEELINGS,word,right,правильный; правый,"correct,proper",Choose the right option.,,,,,,
+w270,FEELINGS,word,wrong,неправильный,"incorrect,false",The password was wrong.,,,,,,
+w271,FEELINGS,word,true,истинный; верный,"correct,real",The statement is true.,,,,,,
+w272,FEELINGS,word,false,ложный; неверный,"untrue,incorrect",That claim is false.,,,,,,
+w273,FEELINGS,word,sure,уверенный,"certain,confident",Are you sure about this?,,,,,,
+w274,FEELINGS,word,ready,готовый,"prepared,set",I'm ready to begin.,,,,,,
+w275,FEELINGS,word,able,способный,"capable,competent",She is able to help.,,,,,,
+w276,FEELINGS,word,free,свободный; бесплатный,"available,complimentary",The course is free.,,,,,,
+w277,FEELINGS,word,busy,занятый,"occupied,active",I am busy right now.,,,,,,
+w278,FEELINGS,word,strong,сильный,"powerful,robust",She has a strong voice.,,,,,,
+w279,FEELINGS,word,weak,слабый,"frail,feeble",The signal is weak.,,,,,,
+w280,FEELINGS,word,happy,счастливый,"glad,joyful",They look happy together.,,,,,,
+w281,FEELINGS,word,sad,грустный,"unhappy,sorrowful",The ending made me sad.,,,,,,
+w282,FEELINGS,word,angry,сердитый,"mad,furious",He was angry about the delay.,,,,,,
+w283,FEELINGS,word,afraid,испуганный; боящийся,"scared,fearful",Don't be afraid to ask.,,,,,,
+w284,FEELINGS,word,worried,обеспокоенный,"concerned,anxious",I am worried about the result.,,,,,,
+w285,FEELINGS,word,calm,спокойный,"peaceful,relaxed",Stay calm and breathe.,,,,,,
+w286,FEELINGS,word,tired,уставший,"exhausted,weary",I feel tired after work.,,,,,,
+w287,FEELINGS,word,excited,взволнованный,"thrilled,eager",She is excited about the trip.,,,,,,
+w288,FEELINGS,word,interested,заинтересованный,"curious,involved",I'm interested in technology.,,,,,,
+w289,FEELINGS,word,confident,уверенный,"sure,self-assured",He feels confident today.,,,,,,
+w290,FEELINGS,word,careful,осторожный; внимательный,"cautious,attentive",Be careful with that glass.,,,,,,
+w291,FEELINGS,word,beautiful,красивый,"lovely,pretty",The view is beautiful.,,,,,,
+w292,FEELINGS,word,comfortable,удобный,"cozy,pleasant",These shoes are comfortable.,,,,,,
+w293,FEELINGS,word,useful,полезный,"helpful,practical",This guide is useful.,,,,,,
+w294,FEELINGS,word,common,обычный; распространённый,"usual,frequent",This is a common mistake.,,,,,,
+w295,FEELINGS,word,special,особенный,"unique,distinct",Today is a special day.,,,,,,
+w296,FEELINGS,word,different,другой; отличающийся,"distinct,unlike",We have different opinions.,,,,,,
+w297,FEELINGS,word,same,тот же; одинаковый,"identical,equal",We chose the same answer.,,,,,,
+w298,FEELINGS,word,enough,достаточно,"sufficient,adequate",We have enough time.,,,,,,
+w299,FEELINGS,word,more,больше,"additional,extra",I need more information.,,,,,,
+w300,FEELINGS,word,less,меньше,"reduced,lower",Try to spend less money.,,,,,,
+w301,LEARNING,word,word,слово,"term,expression",Learn a new word today.,,,,,,
+w302,LEARNING,word,phrase,фраза,"expression,saying",Use this phrase in context.,,,,,,
+w303,LEARNING,word,sentence,предложение,"statement,utterance",Write a complete sentence.,,,,,,
+w304,LEARNING,word,meaning,значение; смысл,"sense,definition",Check the meaning of the word.,,,,,,
+w305,LEARNING,word,translation,перевод,"rendering,interpretation",The translation is accurate.,,,,,,
+w306,LEARNING,word,example,пример,"sample,instance",Give me a real example.,,,,,,
+w307,LEARNING,word,rule,правило,"regulation,principle",Remember this grammar rule.,,,,,,
+w308,LEARNING,word,form,форма,"shape,structure",Use the correct verb form.,,,,,,
+w309,LEARNING,word,tense,время глагола; напряжённый,"verb time,stress",Past tense can be irregular.,,,,,,
+w310,LEARNING,word,language,язык,"speech,tongue",English is a global language.,,,,,,
+w311,LEARNING,word,English,английский язык,English language,We study English together.,,,,,,
+w312,LEARNING,word,lesson,урок,"class,session",Today's lesson is short.,,,,,,
+w313,LEARNING,word,course,курс,"program,class",The course has ten lessons.,,,,,,
+w314,LEARNING,word,book,книга,"volume,text",I read a book every week.,,,,,,
+w315,LEARNING,word,page,страница,"sheet,leaf",Turn to the next page.,,,,,,
+w316,LEARNING,word,chapter,глава,"section,part",Read the first chapter.,,,,,,
+w317,LEARNING,word,story,история; рассказ,"tale,narrative",Tell me an interesting story.,,,,,,
+w318,LEARNING,word,history,история; прошлое,"past,record",History helps explain the present.,,,,,,
+w319,LEARNING,word,knowledge,знание,"understanding,expertise",Knowledge grows with practice.,,,,,,
+w320,LEARNING,word,skill,навык; умение,"ability,talent",Speaking is a useful skill.,,,,,,
+w321,LEARNING,word,practice,практика; тренироваться,"training,exercise",Daily practice brings results.,,,,,,
+w322,LEARNING,word,memory,память,"recall,remembrance",Sleep helps your memory.,,,,,,
+w323,LEARNING,word,attention,внимание,"focus,notice",Pay attention to the details.,,,,,,
+w324,LEARNING,word,focus,внимание; сосредоточиться,"concentrate,center",Focus on one task.,,,,,,
+w325,LEARNING,word,mind,ум; разум,"intellect,thought",Keep an open mind.,,,,,,
+w326,LEARNING,word,thought,мысль,"idea,reflection",That's an interesting thought.,,,,,,
+w327,LEARNING,word,opinion,мнение,"view,belief",Everyone has an opinion.,,,,,,
+w328,LEARNING,word,belief,убеждение; вера,"conviction,faith",Her belief remained strong.,,,,,,
+w329,LEARNING,word,choice,выбор,"option,selection",You have a choice.,,,,,,
+w330,LEARNING,word,decision,решение,"choice,judgment",Make a decision today.,,,,,,
+w331,LEARNING,word,chance,шанс; возможность,"opportunity,possibility",Give yourself another chance.,,,,,,
+w332,LEARNING,word,opportunity,возможность,"chance,opening",This is a rare opportunity.,,,,,,
+w333,LEARNING,word,experience,опыт; переживание,"practice,knowledge",It was a useful experience.,,,,,,
+w334,LEARNING,word,progress,прогресс; продвижение,"advancement,improvement",Track your progress daily.,,,,,,
+w335,LEARNING,word,future,будущее,"tomorrow,prospect",Plan for the future.,,,,,,
+w336,LEARNING,word,past,прошлое; прошлый,"history,former",Learn from the past.,,,,,,
+w337,LEARNING,word,present,настоящее; текущий,"current,now",Focus on the present.,,,,,,
+w338,LEARNING,word,success,успех,"achievement,win",Hard work can bring success.,,,,,,
+w339,LEARNING,word,failure,неудача; отказ,"defeat,breakdown",Failure is part of learning.,,,,,,
+w340,LEARNING,word,effort,усилие,"attempt,work",Your effort matters.,,,,,,
+w341,LEARNING,word,value,ценность; значение,"worth,importance",What is the value of this?,,,,,,
+w342,LEARNING,word,purpose,цель; назначение,"aim,intention",Explain the purpose of the test.,,,,,,
+w343,LEARNING,word,effect,эффект; влияние,"impact,result",The change had an effect.,,,,,,
+w344,LEARNING,word,cause,причина; вызывать,"reason,trigger",Find the main cause.,,,,,,
+w345,LEARNING,word,method,метод; способ,"approach,technique",Try a different method.,,,,,,
+w346,LEARNING,word,step,шаг; этап,"stage,move",Take the next step.,,,,,,
+w347,LEARNING,word,level,уровень,"degree,stage",This level is harder.,,,,,,
+w348,LEARNING,word,standard,стандарт; норма,"norm,benchmark",Follow the company standard.,,,,,,
+w349,LEARNING,word,detail,деталь; подробность,"part,particular",Check every small detail.,,,,,,
+w350,LEARNING,word,difference,разница; отличие,"distinction,contrast",Spot the difference.,,,,,,
+p1,GET,phrase,get up,вставать; подниматься,"rise,stand",I get up at seven every day.,get up,got up,gotten up,I get up early.,I got up early yesterday.,I have gotten up early before.
+p2,GET,phrase,get back,возвращаться,"return,come back",We got back after midnight.,get back,got back,gotten back,I get back home.,I got back home yesterday.,I have gotten back home before.
+p3,GET,phrase,get in,входить; прибывать,"enter,arrive",What time did you get in?,get in,got in,gotten in,I get in late.,I got in late yesterday.,I have gotten in late before.
+p4,GET,phrase,get out,выходить; выбираться,"leave,escape",Get out of the car carefully.,get out,got out,gotten out,I get out of the room.,I got out of the room yesterday.,I have gotten out of the room before.
+p5,GET,phrase,get on,садиться на транспорт; ладить,"board,get along",Get on the next bus.,get on,got on,gotten on,I get on the bus.,I got on the bus yesterday.,I have gotten on the bus before.
+p6,GET,phrase,get off,выходить из транспорта,"disembark,leave",We get off at the last stop.,get off,got off,gotten off,I get off at the last stop.,I got off at the last stop yesterday.,I have gotten off at the last stop before.
+p7,GET,phrase,get over,оправиться; преодолеть,"recover,overcome",She got over the flu quickly.,get over,got over,gotten over,I get over a bad cold.,I got over a bad cold yesterday.,I have gotten over a bad cold before.
+p8,GET,phrase,get through,справиться; дозвониться,"finish,reach",We got through a difficult week.,get through,got through,gotten through,I get through the exam.,I got through the exam yesterday.,I have gotten through the exam before.
+p9,GET,phrase,get along with,ладить с кем-либо,"be friendly,cooperate",I get along with my coworkers.,get along with,got along with,gotten along with,I get along with my colleagues.,I got along with my old team.,I have always gotten along with them.
+p10,GET,phrase,get away with,избежать наказания,escape punishment,He won't get away with cheating.,get away with,got away with,gotten away with,I get away with the mistake.,I got away with the mistake yesterday.,I have gotten away with the mistake before.
+p11,TAKE,phrase,take off,снимать; взлетать,"remove,depart",The plane took off on time.,take off,took off,taken off,I take off my coat.,I took off my coat.,I have taken off my coat.
+p12,TAKE,phrase,take out,вынимать; выносить,"remove,extract","Take out the rubbish, please.",take out,took out,taken out,I take out the rubbish.,I took out the rubbish yesterday.,I have taken out the rubbish before.
+p13,TAKE,phrase,take over,брать под контроль,assume control,A new manager took over.,take over,took over,taken over,I take over the company.,I took over the company yesterday.,I have taken over the company before.
+p14,TAKE,phrase,take up,начать заниматься; занимать,"start,occupy",She took up painting last year.,take up,took up,taken up,I take up painting.,I took up painting yesterday.,I have taken up painting before.
+p15,TAKE,phrase,take back,забирать обратно,"return,retract",I take back what I said.,take back,took back,taken back,I take back my words.,I took back my words yesterday.,I have taken back my words before.
+p16,TAKE,phrase,take in,впитывать; понимать,"absorb,understand",It was too much to take in.,take in,took in,taken in,I take in the news.,I took in the news yesterday.,I have taken in the news before.
+p17,TAKE,phrase,take down,снимать; записывать,"remove,write",Take down these notes.,take down,took down,taken down,I take down the poster.,I took down the poster yesterday.,I have taken down the poster before.
+p18,TAKE,phrase,take apart,разбирать на части,"dismantle,separate",We took apart the old desk.,take apart,took apart,taken apart,I take apart a chair.,I took apart a chair yesterday.,I have taken apart a chair before.
+p19,TAKE,phrase,take care of,заботиться о,"look after,handle",Take care of your health.,take care of,took care of,taken care of,I take care of my cat.,I took care of my cat yesterday.,I have taken care of my cat before.
+p20,TAKE,phrase,take after,быть похожим на родственника,"resemble,favor",She takes after her mother.,take after,took after,taken after,I take after my father.,I took after my father as a child.,I have always taken after my father.
+p21,LOOK,phrase,look up,искать сведения,"search,consult",Look up the word in a dictionary.,,,,,,
+p22,LOOK,phrase,look for,искать,"search,seek",I'm looking for my glasses.,,,,,,
+p23,LOOK,phrase,look after,присматривать; заботиться,"care for,watch",Look after the cat tonight.,,,,,,
+p24,LOOK,phrase,look forward to,с нетерпением ждать,"anticipate,await",I look forward to meeting you.,,,,,,
+p25,LOOK,phrase,look into,изучить; расследовать,"investigate,examine",We'll look into the error.,,,,,,
+p26,LOOK,phrase,look out,осторожно; быть настороже,"watch out,beware",Look out for that car!,,,,,,
+p27,LOOK,phrase,look back,оглядываться; вспоминать,"recall,reflect",I look back on that day with joy.,,,,,,
+p28,LOOK,phrase,look around,осматриваться,"explore,inspect",Let's look around the museum.,,,,,,
+p29,LOOK,phrase,look down on,смотреть свысока,"despise,belittle",Never look down on others.,,,,,,
+p30,LOOK,phrase,look up to,восхищаться; уважать,"admire,respect",I look up to my teacher.,,,,,,
+p31,GO,phrase,go on,продолжаться; происходить,"continue,happen",Please go on with your story.,go on,went on,gone on,I go on with the lesson.,I went on with the lesson yesterday.,I have gone on with the lesson before.
+p32,GO,phrase,go back,возвращаться,"return,retrace",Go back to the main screen.,go back,went back,gone back,I go back home.,I went back home yesterday.,I have gone back home before.
+p33,GO,phrase,go out,выходить в свет; гаснуть,"leave,extinguish",We go out on Fridays.,go out,went out,gone out,I go out for dinner.,I went out for dinner yesterday.,I have gone out for dinner before.
+p34,GO,phrase,go away,уходить; уезжать,"depart,leave",Go away for the weekend.,go away,went away,gone away,I go away for a walk.,I went away for a walk yesterday.,I have gone away for a walk before.
+p35,GO,phrase,go down,снижаться; опускаться,"decrease,descend",Prices went down in May.,go down,went down,gone down,I go down slowly.,I went down slowly yesterday.,I have gone down slowly before.
+p36,GO,phrase,go up,расти; подниматься,"rise,increase",The temperature went up.,go up,went up,gone up,I go up quickly.,I went up quickly yesterday.,I have gone up quickly before.
+p37,GO,phrase,go ahead,продолжать; действовать,"proceed,continue",Go ahead and start now.,go ahead,went ahead,gone ahead,I go ahead of the group.,I went ahead of the group yesterday.,I have gone ahead of the group before.
+p38,GO,phrase,go over,повторить; проверить,"review,examine",Let's go over the rules.,go over,went over,gone over,I go over the list.,I went over the list yesterday.,I have gone over the list before.
+p39,GO,phrase,go through,пережить; пройти через,"experience,endure",He went through many changes.,go through,went through,gone through,I go through a difficult period.,I went through a difficult period yesterday.,I have gone through a difficult period before.
+p40,GO,phrase,go off,срабатывать; звенеть,"ring,activate",My alarm went off at six.,go off,went off,gone off,The alarm goes off early.,The alarm went off early.,The alarm has gone off early.
+p41,COME,phrase,come back,возвращаться,"return,reappear",Come back tomorrow morning.,come back,came back,come back,I come back home.,I came back home yesterday.,I have come back home before.
+p42,COME,phrase,come in,входить,"enter,arrive",Come in and have a seat.,come in,came in,come in,I come in early.,I came in early yesterday.,I have come in early before.
+p43,COME,phrase,come out,выходить; публиковаться,"appear,be published",The new book comes out today.,come out,came out,come out,The book comes out in June.,The book came out last June.,The book has come out already.
+p44,COME,phrase,come up,возникать; подниматься,"arise,appear",A problem came up at work.,come up,came up,come up,An issue comes up.,An issue came up.,An issue has come up.
+p45,COME,phrase,come over,приходить в гости,"visit,drop by",Come over for dinner.,come over,came over,come over,I come over for lunch.,I came over for lunch yesterday.,I have come over for lunch before.
+p46,COME,phrase,come across,случайно наткнуться,"encounter,find",I came across an old photo.,come across,came across,come across,I come across an old photo.,I came across an old photo yesterday.,I have come across an old photo before.
+p47,COME,phrase,come along,присоединяться; продвигаться,"join,progress",Do you want to come along?,come along,came along,come along,I come along with my friends.,I came along with my friends.,I have come along before.
+p48,COME,phrase,come down,снижаться; спускаться,"descend,decrease",The price has come down.,come down,came down,come down,I come down the stairs.,I came down the stairs yesterday.,I have come down the stairs before.
+p49,COME,phrase,come up with,придумать; предложить,"invent,devise",She came up with a smart idea.,come up with,came up with,come up with,I come up with a solution.,I came up with a solution yesterday.,I have come up with a solution before.
+p50,COME,phrase,come through,выдержать; оправдать надежды,"survive,deliver",Our team came through in the end.,come through,came through,come through,I come through when needed.,I came through when needed.,I have come through before.
+p51,PUT,phrase,put on,надевать; включать,"wear,dress in",Put on a warm sweater.,put on,put on,put on,I put on a coat.,I put on a coat yesterday.,I have put on a coat.
+p52,PUT,phrase,put off,откладывать,"postpone,delay",Don't put off your homework.,put off,put off,put off,I put off the task.,I put off the task yesterday.,I have put off the task.
+p53,PUT,phrase,put out,тушить; публиковать,"extinguish,publish",Put out the fire safely.,put out,put out,put out,I put out the fire.,I put out the fire yesterday.,I have put out the fire before.
+p54,PUT,phrase,put up,размещать; поднимать,"erect,display",They put up a new sign.,put up,put up,put up,I put up a poster.,I put up a poster yesterday.,I have put up a poster before.
+p55,PUT,phrase,put down,класть; записывать,"place,write",Put down your bag here.,put down,put down,put down,I put down the bag.,I put down the bag yesterday.,I have put down the bag before.
+p56,PUT,phrase,put away,убирать на место,"store,tidy",Put away the dishes.,put away,put away,put away,I put away the dishes.,I put away the dishes yesterday.,I have put away the dishes.
+p57,PUT,phrase,put back,класть обратно,"return,replace",Put the book back on the shelf.,put back,put back,put back,I put back the book.,I put back the book yesterday.,I have put back the book before.
+p58,PUT,phrase,put up with,терпеть; мириться,"tolerate,endure",I can't put up with this noise.,put up with,put up with,put up with,I put up with the noise.,I put up with the noise yesterday.,I have put up with the noise before.
+p59,PUT,phrase,put together,собирать; составлять,"assemble,compile",We put together a new shelf.,put together,put together,put together,I put together a shelf.,I put together a shelf yesterday.,I have put together a shelf before.
+p60,PUT,phrase,put forward,выдвигать предложение,"propose,suggest",She put forward a new plan.,put forward,put forward,put forward,I put forward a new plan.,I put forward a new plan yesterday.,I have put forward a new plan before.
+p61,GIVE,phrase,give up,сдаваться; бросать,"quit,stop",Never give up learning.,give up,gave up,given up,I give up too soon.,I gave up too soon yesterday.,I have given up too soon before.
+p62,GIVE,phrase,give back,возвращать,"return,restore",Please give back my book.,give back,gave back,given back,I give back the book.,I gave back the book yesterday.,I have given back the book before.
+p63,GIVE,phrase,give away,дарить; раскрывать тайну,"donate,reveal",We gave away old clothes.,give away,gave away,given away,I give away old clothes.,I gave away old clothes yesterday.,I have given away old clothes before.
+p64,GIVE,phrase,give in,сдаваться; уступать,"yield,surrender",He finally gave in.,give in,gave in,given in,I give in to pressure.,I gave in to pressure yesterday.,I have given in to pressure before.
+p65,GIVE,phrase,give out,раздавать; заканчиваться,"distribute,run out",They gave out free tickets.,give out,gave out,given out,I give out free samples.,I gave out free samples yesterday.,I have given out free samples before.
+p66,GIVE,phrase,give off,излучать; выделять,"emit,release",The flowers give off a sweet smell.,give off,gave off,given off,The heater gives off heat.,The heater gave off heat.,The heater has given off heat.
+p67,GIVE,phrase,give rise to,порождать; вызывать,"cause,create",The change gave rise to questions.,give rise to,gave rise to,given rise to,I give rise to new questions.,I gave rise to new questions yesterday.,I have given rise to new questions before.
+p68,GIVE,phrase,give someone a hand,помочь кому-либо,"help,assist",Can you give me a hand?,give someone a hand,gave someone a hand,given someone a hand,I give her a hand.,I gave her a hand.,I have given her a hand.
+p69,GIVE,phrase,give it a try,попробовать,"attempt,test",Give it a try before deciding.,give it a try,gave it a try,given it a try,I give it a try.,I gave it a try.,I have given it a try.
+p70,GIVE,phrase,give way,уступать дорогу; поддаваться,"yield,make room",Give way to pedestrians.,give way,gave way,given way,I give way to pedestrians.,I gave way to pedestrians.,I have given way to pedestrians.
+p71,MAKE,phrase,make up,выдумывать; мириться,"invent,reconcile",Don't make up excuses.,make up,made up,made up,I make up a story.,I made up a story yesterday.,I have made up a story before.
+p72,MAKE,phrase,make out,разглядеть; разобрать,"discern,recognize",I can't make out that sign.,make out,made out,made out,I make out the shape.,I made out the shape yesterday.,I have made out the shape before.
+p73,MAKE,phrase,make up for,компенсировать,"compensate,offset",I'll make up for lost time.,make up for,made up for,made up for,I make up for the delay.,I made up for the delay yesterday.,I have made up for the delay before.
+p74,MAKE,phrase,make do with,обойтись имеющимся,"manage with,settle for",We'll make do with one laptop.,make do with,made do with,made do with,I make do with old tools.,I made do with old tools yesterday.,I have made do with old tools before.
+p75,MAKE,phrase,make sure,убедиться; проверить,"verify,ensure",Make sure the door is locked.,make sure,made sure,made sure,I make sure the door is closed.,I made sure the door was closed.,I have made sure the door is closed.
+p76,MAKE,phrase,make sense,иметь смысл,"be logical,be clear",This explanation makes sense.,make sense,made sense,made sense,This plan makes sense.,This plan made sense.,This plan has made sense from the start.
+p77,MAKE,phrase,make a decision,принять решение,"decide,choose",We need to make a decision.,make a decision,made a decision,made a decision,I make a decision.,I made a decision.,I have made a decision.
+p78,MAKE,phrase,make progress,добиваться прогресса,"advance,improve",You make progress every week.,make progress,made progress,made progress,I make progress every week.,I made progress last week.,I have made progress this month.
+p79,MAKE,phrase,make room for,освободить место,"create space,accommodate",Make room for another chair.,make room for,made room for,made room for,I make room for another person.,I made room for another person yesterday.,I have made room for another person before.
+p80,MAKE,phrase,make it,успеть; справиться,"succeed,arrive",We made it before the train left.,make it,made it,made it,I make it on time.,I made it on time yesterday.,I have made it on time before.
+p81,TURN,phrase,turn on,включать,"switch on,activate",Turn on the light.,,,,,,
+p82,TURN,phrase,turn off,выключать,"switch off,disable",Turn off the computer.,,,,,,
+p83,TURN,phrase,turn up,появляться; увеличивать,"appear,increase",He turned up unexpectedly.,,,,,,
+p84,TURN,phrase,turn down,отказываться; уменьшать,"reject,reduce",She turned down the offer.,,,,,,
+p85,TURN,phrase,turn around,развернуться,"reverse,rotate",Turn around and look behind you.,,,,,,
+p86,TURN,phrase,turn back,поворачивать обратно,"return,reverse",We had to turn back.,,,,,,
+p87,TURN,phrase,turn over,перевернуть; передать,"flip,hand over",Turn over the card.,,,,,,
+p88,TURN,phrase,turn into,превращаться в,"become,transform",Water turns into ice.,,,,,,
+p89,TURN,phrase,turn out,оказаться; выясниться,"prove,emerge",It turned out to be easy.,,,,,,
+p90,TURN,phrase,turn to,обратиться к,"consult,seek help",I turned to my friend for advice.,,,,,,
+p91,BRING,phrase,bring up,поднять тему; воспитывать,"mention,raise",She brought up an important question.,bring up,brought up,brought up,I bring up the topic.,I brought up the topic yesterday.,I have brought up the topic before.
+p92,BRING,phrase,bring back,вернуть; напомнить,"return,restore",This song brings back memories.,bring back,brought back,brought back,I bring back good memories.,I brought back good memories yesterday.,I have brought back good memories before.
+p93,BRING,phrase,bring in,вводить; приносить доход,"introduce,earn",The app brought in new users.,bring in,brought in,brought in,I bring in a new rule.,I brought in a new rule yesterday.,I have brought in a new rule before.
+p94,BRING,phrase,bring out,раскрывать; выпускать,"reveal,publish",This task brings out his skills.,bring out,brought out,brought out,I bring out the best in people.,I brought out the best in people yesterday.,I have brought out the best in people before.
+p95,BRING,phrase,bring about,вызывать изменения,"cause,produce",The update brought about changes.,bring about,brought about,brought about,We bring about change.,We brought about change.,We have brought about change.
+p96,BRING,phrase,bring down,снизить; свергнуть,"reduce,topple",We need to bring down costs.,bring down,brought down,brought down,I bring down the cost.,I brought down the cost yesterday.,I have brought down the cost before.
+p97,BRING,phrase,bring along,взять с собой,"take,carry",Bring along your notebook.,bring along,brought along,brought along,I bring along my friend.,I brought along my friend yesterday.,I have brought along my friend before.
+p98,BRING,phrase,bring together,объединить,"unite,gather",The course brings people together.,bring together,brought together,brought together,I bring together the team.,I brought together the team yesterday.,I have brought together the team before.
+p99,BRING,phrase,bring forward,перенести на более ранний срок,"advance,reschedule",We brought the meeting forward.,bring forward,brought forward,brought forward,I bring forward the meeting.,I brought forward the meeting yesterday.,I have brought forward the meeting before.
+p100,BRING,phrase,bring to mind,напоминать,"recall,evoke",That smell brings to mind summer.,bring to mind,brought to mind,brought to mind,This brings to mind summer.,This brought to mind summer.,This has brought to mind summer.
+p101,HOLD,phrase,hold on,подождать; держаться,"wait,grip","Hold on, I'll be right back.",hold on,held on,held on,I hold on for a minute.,I held on for a minute yesterday.,I have held on for a minute before.
+p102,HOLD,phrase,hold up,задерживать; поддерживать,"delay,support",Traffic held us up.,hold up,held up,held up,Traffic holds me up.,Traffic held me up.,Traffic has held me up.
+p103,HOLD,phrase,hold back,сдерживать,"restrain,withhold",She held back her tears.,hold back,held back,held back,I hold back my emotions.,I held back my emotions yesterday.,I have held back my emotions before.
+p104,HOLD,phrase,hold out,протягивать; выдержать,"extend,endure",He held out his hand.,hold out,held out,held out,I hold out my hand.,I held out my hand yesterday.,I have held out my hand before.
+p105,HOLD,phrase,hold off,отложить; сдерживать,"delay,resist",Let's hold off until Monday.,hold off,held off,held off,I hold off on the decision.,I held off on the decision.,I have held off on the decision.
+p106,HOLD,phrase,hold down,удерживать работу; прижимать,"keep,secure",He holds down two jobs.,hold down,held down,held down,I hold down a steady job.,I held down a steady job.,I have held down a steady job.
+p107,HOLD,phrase,hold onto,крепко держаться; сохранять,"keep,retain",Hold onto your ticket.,hold onto,held onto,held onto,I hold onto the ticket.,I held onto the ticket yesterday.,I have held onto the ticket before.
+p108,HOLD,phrase,hold together,сохранять единство,"stay united,cohere",The team held together well.,hold together,held together,held together,I hold together in a crisis.,I held together in a crisis yesterday.,I have held together in a crisis before.
+p109,HOLD,phrase,hold against,ставить в вину,"blame,resent",I won't hold it against you.,hold against,held against,held against,I hold it against him.,I held it against him.,I have held it against him.
+p110,HOLD,phrase,hold over,перенести на поздний срок,"postpone,carry over",The vote was held over until Friday.,hold over,held over,held over,We hold the vote over.,We held the vote over.,We have held the vote over.
+p111,KEEP,phrase,keep up,не отставать; поддерживать,"maintain,match pace",Keep up the good work.,keep up,kept up,kept up,I keep up the pace.,I kept up the pace yesterday.,I have kept up the pace before.
+p112,KEEP,phrase,keep on,продолжать,"continue,persist",Keep on trying.,keep on,kept on,kept on,I keep on learning.,I kept on learning yesterday.,I have kept on learning before.
+p113,KEEP,phrase,keep away,держаться подальше,"avoid,stay back",Keep away from the edge.,keep away,kept away,kept away,I keep away from the fire.,I kept away from the fire yesterday.,I have kept away from the fire before.
+p114,KEEP,phrase,keep out,не впускать; не входить,"exclude,bar",Keep out of this room.,keep out,kept out,kept out,I keep out strangers.,I kept out strangers yesterday.,I have kept out strangers before.
+p115,KEEP,phrase,keep in touch,поддерживать связь,"stay connected,contact",Let's keep in touch.,keep in touch,kept in touch,kept in touch,I keep in touch with friends.,I kept in touch with friends yesterday.,I have kept in touch with friends before.
+p116,KEEP,phrase,keep track of,следить; учитывать,"monitor,record",Keep track of your progress.,keep track of,kept track of,kept track of,I keep track of my spending.,I kept track of my spending yesterday.,I have kept track of my spending before.
+p117,KEEP,phrase,keep an eye on,присматривать; следить,"watch,monitor",Keep an eye on the timer.,keep an eye on,kept an eye on,kept an eye on,I keep an eye on the kids.,I kept an eye on the kids.,I have kept an eye on the kids.
+p118,KEEP,phrase,keep calm,сохранять спокойствие,"stay relaxed,remain calm",Keep calm under pressure.,keep calm,kept calm,kept calm,I keep calm during the meeting.,I kept calm during the meeting yesterday.,I have kept calm during the meeting before.
+p119,KEEP,phrase,keep in mind,иметь в виду,"remember,consider",Keep this rule in mind.,keep in mind,kept in mind,kept in mind,I keep the rule in mind.,I kept the rule in mind.,I have kept the rule in mind.
+p120,KEEP,phrase,keep going,продолжать двигаться,"carry on,continue",Keep going until the end.,keep going,kept going,kept going,I keep going until the end.,I kept going until the end yesterday.,I have kept going until the end before.
+p121,SET,phrase,set up,настроить; организовать,"configure,establish",Set up a new account.,set up,set up,set up,I set up a new phone.,I set up a new phone yesterday.,I have set up a new phone before.
+p122,SET,phrase,set off,отправляться; запускать,"depart,trigger",We set off before sunrise.,set off,set off,set off,I set off early.,I set off early yesterday.,I have set off early before.
+p123,SET,phrase,set out,отправляться; излагать,"begin,explain",They set out on a long trip.,set out,set out,set out,I set out on a trip.,I set out on a trip yesterday.,I have set out on a trip before.
+p124,SET,phrase,set aside,откладывать; выделять,"reserve,save",Set aside some money.,set aside,set aside,set aside,I set aside some money.,I set aside some money yesterday.,I have set aside some money before.
+p125,SET,phrase,set down,поставить; записать,"place,record",Set down the box carefully.,set down,set down,set down,I set down the tray.,I set down the tray yesterday.,I have set down the tray before.
+p126,SET,phrase,set back,задержать; отбросить назад,"delay,hinder",The bug set us back a day.,set back,set back,set back,The bug sets us back.,The bug set us back.,The bug has set us back.
+p127,SET,phrase,set in,наступать; устанавливаться,"begin,arrive",Winter has set in early.,set in,set in,set in,Winter sets in early.,Winter set in early.,Winter has set in early.
+p128,SET,phrase,set about,приступать к делу,"begin,tackle",She set about solving the issue.,set about,set about,set about,I set about solving the problem.,I set about solving the problem yesterday.,I have set about solving the problem before.
+p129,SET,phrase,set apart,выделять; отличать,"distinguish,separate",Her style sets her apart.,set apart,set apart,set apart,The design sets the app apart.,The design set the app apart.,The design has set the app apart.
+p130,SET,phrase,set the stage for,подготовить почву для,"prepare,enable",This release set the stage for growth.,set the stage for,set the stage for,set the stage for,I set the stage for a new release.,I set the stage for a new release yesterday.,I have set the stage for a new release before.
+p131,RUN,phrase,run out of,исчерпать запас,"use up,exhaust",We ran out of milk.,run out of,ran out of,run out of,I run out of time.,I ran out of time.,I have run out of time.
+p132,RUN,phrase,run into,случайно встретить; столкнуться,"encounter,meet",I ran into an old friend.,run into,ran into,run into,I run into an old friend.,I ran into an old friend yesterday.,I have run into an old friend before.
+p133,RUN,phrase,run away,убегать,"escape,flee",The dog ran away.,run away,ran away,run away,I run away fast.,I ran away fast yesterday.,I have run away fast before.
+p134,RUN,phrase,run over,переехать; быстро просмотреть,"drive over,review",Let's run over the plan.,run over,ran over,run over,I run over the instructions.,I ran over the instructions yesterday.,I have run over the instructions before.
+p135,RUN,phrase,run through,быстро повторить,"review,rehearse",Run through the checklist.,run through,ran through,run through,I run through the checklist.,I ran through the checklist yesterday.,I have run through the checklist before.
+p136,RUN,phrase,run by,согласовать; обсудить,"check with,consult",Run the idea by your manager.,run by,ran by,run by,I run an idea by my boss.,I ran an idea by my boss.,I have run an idea by my boss.
+p137,RUN,phrase,run across,случайно наткнуться,"encounter,find",I ran across an interesting article.,run across,ran across,run across,I run across an article.,I ran across an article yesterday.,I have run across an article before.
+p138,RUN,phrase,run up,нарастить расходы; быстро подняться,"accumulate,increase",They ran up a large bill.,run up,ran up,run up,I run up a large bill.,I ran up a large bill yesterday.,I have run up a large bill before.
+p139,RUN,phrase,run down,разрядиться; критиковать,"deplete,criticize",My watch battery ran down.,run down,ran down,run down,The battery runs down quickly.,The battery ran down yesterday.,The battery has run down again.
+p140,RUN,phrase,run after,бежать за; преследовать,"chase,pursue",The child ran after the ball.,run after,ran after,run after,I run after the dog.,I ran after the dog yesterday.,I have run after the dog before.
+p141,MIXED,phrase,work out,тренироваться; получаться,"exercise,succeed",We work out twice a week.,,,,,,
+p142,MIXED,phrase,find out,выяснять,"discover,learn",Find out what happened.,find out,found out,found out,I find out the answer.,I found out the answer yesterday.,I have found out the answer before.
+p143,MIXED,phrase,check out,проверять; посмотреть,"inspect,explore",Check out this new app.,,,,,,
+p144,MIXED,phrase,break down,ломаться; распадаться,"fail,collapse",The car broke down.,break down,broke down,broken down,My car breaks down occasionally.,My car broke down yesterday.,My car has broken down twice.
+p145,MIXED,phrase,break up,расставаться; распадаться,"separate,split",They broke up last year.,break up,broke up,broken up,Some couples break up.,They broke up last year.,They have broken up already.
+p146,MIXED,phrase,pick up,поднимать; забирать,"collect,lift",Pick up the package later.,,,,,,
+p147,MIXED,phrase,pick out,выбирать,"choose,select",Pick out your favorite color.,,,,,,
+p148,MIXED,phrase,carry on,продолжать,"continue,proceed",Carry on with your work.,,,,,,
+p149,MIXED,phrase,carry out,выполнять; осуществлять,"perform,execute",Carry out the test carefully.,,,,,,
+p150,MIXED,phrase,figure out,понять; разобраться,"solve,understand",I figured out the problem.,,,,,,
