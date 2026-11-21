@@ -50,9 +50,10 @@
       <div if="{{!flipped}}" class="face" @click="flipCard">
         <text class="word">{{currentWord}}</text>
         <text class="tap-hint">Нажми для перевода</text>
+        <text class="swipe-hint">← и → листать · ↑ открыть</text>
       </div>
       <scroll if="{{flipped}}" class="back-scroll" scroll-y="true" scroll-top="{{scrollReset}}">
-        <div class="back-content">
+        <div class="back-content" @click="showFront">
           <text class="back-word">{{currentWord}}</text>
           <text class="translation">{{currentRu}}</text>
           <text class="part-label">СИНОНИМЫ</text>
@@ -66,13 +67,18 @@
             <text class="form-example">2. {{example2}}</text>
             <text class="form-example">3. {{example3}}</text>
           </div>
+          <text class="back-tap">Нажми на текст, чтобы закрыть</text>
         </div>
       </scroll>
       <div class="controls">
         <div class="bad-btn" @click="answerNo"><text class="vote-icon">✕</text><text class="bad-text">НЕ ЗНАЮ</text></div>
         <div class="good-btn" @click="answerYes"><text class="vote-icon">✓</text><text class="good-text">ЗНАЮ</text></div>
       </div>
-      <text class="card-footer">{{saveLabel}}  ·  {{sessionLabel}}</text>
+      <div class="card-footer-row">
+        <div class="card-nav" @click="previousCard"><text class="card-nav-label">‹</text></div>
+        <text class="card-footer">{{saveLabel}}  ·  {{sessionLabel}}</text>
+        <div class="card-nav" @click="nextCard"><text class="card-nav-label">›</text></div>
+      </div>
     </div>
 
     <div if="{{mode === 'done'}}" class="done-page">
@@ -151,7 +157,21 @@ export default {
     return true
   },
   onSwipe(e) {
-    if (e && e.direction === 'right') this.onBackPress()
+    if (!e || !e.direction) return
+    const direction = e.direction
+    if (this.mode === 'card') {
+      if (direction === 'left') this.nextCard()
+      else if (direction === 'right') this.previousCard()
+      else if (direction === 'up' && !this.flipped) this.flipCard()
+      // On the back side, vertical swipes belong to the native scroll view.
+      return
+    }
+    if (this.mode === 'groups') {
+      if (direction === 'left' || direction === 'up') this.nextPage()
+      else if (direction === 'right' || direction === 'down') this.prevPage()
+      return
+    }
+    if (direction === 'right') this.onBackPress()
   },
   exitGame() { this.saveProgress(); app.terminate() },
   goHome() { this.saveProgress(); this.updateSummary(); this.headerLabel = '500'; this.mode = 'home' },
@@ -197,6 +217,7 @@ export default {
   },
   beginSession() {
     this._index = 0
+    this._sessionGrades = {}
     this.sessionKnown = 0
     this.sessionWrong = 0
     if (this._queue.length === 0) { this.mode = 'done'; return }
@@ -231,16 +252,46 @@ export default {
     this.example3 = card.examples ? card.examples[2] : ''
     this.positionLabel = (this._index+1)+' / '+this._queue.length
     this.sessionLabel = this.positionLabel
-    this.progressWidth = Math.floor(304 * this._index / this._queue.length)
+    // Swiping ahead only previews cards: progress counts answers, not views.
+    this.progressWidth = Math.floor(304 * Object.keys(this._sessionGrades).length / this._queue.length)
     this.scrollReset = 0
   },
-  flipCard() { this.flipped = true },
+  nextCard() {
+    if (this.mode !== 'card' || this._index >= this._queue.length - 1) return
+    this._index++
+    this.displayCurrent()
+  },
+  previousCard() {
+    if (this.mode !== 'card' || this._index <= 0) return
+    this._index--
+    this.displayCurrent()
+  },
+  flipCard() { if (this.mode === 'card') this.flipped = true },
+  showFront() { if (this.mode === 'card') this.flipped = false },
+  advanceToUnrated() {
+    for (let step = 1; step <= this._queue.length; step++) {
+      const next = (this._index + step) % this._queue.length
+      if (!Object.prototype.hasOwnProperty.call(this._sessionGrades, this._queue[next].id)) {
+        this._index = next
+        this.displayCurrent()
+        return
+      }
+    }
+    this.mode = 'done'
+    this.updateSummary()
+  },
   answerYes() { this.recordAnswer(true) },
   answerNo() { this.recordAnswer(false) },
   recordAnswer(known) {
     if (this.mode !== 'card') return
     const card = this._queue[this._index]
     if (!card) return
+    // Going back to a previously graded card must not duplicate the review.
+    if (Object.prototype.hasOwnProperty.call(this._sessionGrades, card.id)) {
+      this.advanceToUnrated()
+      return
+    }
+    this._sessionGrades[card.id] = known
     const now = Date.now()
     const p = this._progress[card.id] || {right:0, wrong:0, level:0, due:0, last:0}
     if (known) {
@@ -257,8 +308,7 @@ export default {
     p.last = now
     this._progress[card.id] = p
     this.saveProgress()
-    this._index++
-    this.displayCurrent()
+    this.advanceToUnrated()
   },
   restartGroup() {
     if (this._selectedGroup === 'REVIEW') this.startReview()
@@ -284,11 +334,11 @@ export default {
 .logo { color: #a5b4fc; font-size: 23px; font-weight: bold; }
 .top-right { color: #8b8d96; font-size: 18px; }
 .home { width: 304px; height: 410px; flex-direction: column; align-items: center; }
-.hero { width: 304px; height: 161px; justify-content: center; align-items: center; }
-.hero-mark { color: #8585e9; font-size: 18px; font-weight: bold; margin-bottom: 5px; }
-.hero-title { color: #ffffff; font-size: 31px; font-weight: bold; margin-bottom: 7px; }
-.hero-desc { color: #c5c5d0; font-size: 20px; }
-.hero-stat { color: #8d91a3; font-size: 15px; margin-top: 7px; }
+.hero { width: 304px; height: 161px; justify-content: center; align-items: center; flex-direction: column; }
+.hero-mark { color: #8585e9; font-size: 18px; font-weight: bold; margin-bottom: 5px; width: 304px; text-align: center; }
+.hero-title { color: #ffffff; font-size: 29px; font-weight: bold; margin-bottom: 7px; width: 304px; text-align: center; }
+.hero-desc { color: #c5c5d0; font-size: 19px; width: 304px; text-align: center; }
+.hero-stat { color: #8d91a3; font-size: 14px; margin-top: 7px; width: 304px; text-align: center; }
 .primary { width: 290px; height: 58px; background-color: #5c59de; border-radius: 17px; align-items: center; justify-content: center; margin-bottom: 11px; }
 .primary-label { color: #ffffff; font-size: 19px; font-weight: bold; }
 .secondary { width: 290px; height: 53px; border-radius: 15px; background-color: #212331; align-items: center; justify-content: center; margin-bottom: 9px; }
@@ -316,11 +366,13 @@ export default {
 .position { color: #a1a0b0; font-size: 15px; }
 .progress-track { width: 304px; height: 6px; background-color: #393b47; border-radius: 4px; }
 .progress-fill { height: 6px; border-radius: 4px; background-color: #9b92ff; }
-.face { width: 304px; height: 274px; justify-content: center; align-items: center; }
+.face { width: 304px; height: 251px; justify-content: center; align-items: center; flex-direction: column; }
 .word { color: #ffffff; font-size: 35px; font-weight: bold; text-align: center; width: 296px; }
-.tap-hint { color: #84848d; font-size: 19px; margin-top: 25px; }
-.back-scroll { width: 304px; height: 274px; flex-direction: column; }
+.tap-hint { color: #84848d; font-size: 17px; margin-top: 21px; width: 296px; text-align: center; }
+.swipe-hint { color: #77768d; font-size: 13px; margin-top: 10px; width: 296px; text-align: center; }
+.back-scroll { width: 304px; height: 251px; flex-direction: column; }
 .back-content { width: 304px; padding: 9px 2px 17px; flex-direction: column; }
+.back-tap { color: #8585a1; font-size: 13px; text-align: center; margin-top: 12px; }
 .back-word { color: #ffffff; font-size: 27px; font-weight: bold; text-align: center; margin-bottom: 5px; }
 .translation { color: #b7c4ff; font-size: 19px; text-align: center; margin-bottom: 7px; }
 .part-label { color: #9b92ff; font-size: 13px; font-weight: bold; margin-top: 8px; margin-bottom: 3px; }
@@ -334,8 +386,11 @@ export default {
 .vote-icon { color: #ffffff; font-size: 22px; font-weight: bold; }
 .bad-text { color: #ffacb7; font-size: 17px; font-weight: bold; }
 .good-text { color: #8ce7ad; font-size: 17px; font-weight: bold; }
-.card-footer { color: #7e8492; font-size: 13px; text-align: center; margin-top: 7px; }
-.done-page { width: 304px; height: 408px; justify-content: center; align-items: center; }
+.card-footer-row { width: 304px; height: 27px; flex-direction: row; justify-content: space-between; align-items: center; }
+.card-nav { width: 48px; height: 27px; background-color: #242736; border-radius: 7px; justify-content: center; align-items: center; }
+.card-nav-label { color: #c5c9f3; font-size: 23px; }
+.card-footer { color: #7e8492; font-size: 12px; text-align: center; width: 196px; }
+.done-page { width: 304px; height: 408px; justify-content: center; align-items: center; flex-direction: column; }
 .done-icon { color: #8ce7ad; font-size: 60px; }
 .done-title { color: #ffffff; font-size: 24px; font-weight: bold; margin-top: 13px; }
 .done-subtitle { color: #b0b4c7; font-size: 16px; margin-top: 7px; margin-bottom: 23px; }
